@@ -1,0 +1,10 @@
+C:\Users\S\Documents\ICS3U\Assignments\FallingObjectsSasha\FallingObjectsSasha\bin\Debug\FallingObjectsSasha.exe.config
+C:\Users\S\Documents\ICS3U\Assignments\FallingObjectsSasha\FallingObjectsSasha\bin\Debug\FallingObjectsSasha.exe
+C:\Users\S\Documents\ICS3U\Assignments\FallingObjectsSasha\FallingObjectsSasha\bin\Debug\FallingObjectsSasha.pdb
+C:\Users\S\Documents\ICS3U\Assignments\FallingObjectsSasha\FallingObjectsSasha\obj\Debug\FallingObjectsSasha.csprojAssemblyReference.cache
+C:\Users\S\Documents\ICS3U\Assignments\FallingObjectsSasha\FallingObjectsSasha\obj\Debug\FallingObjectsSasha.frmFallingObjects.resources
+C:\Users\S\Documents\ICS3U\Assignments\FallingObjectsSasha\FallingObjectsSasha\obj\Debug\FallingObjectsSasha.Properties.Resources.resources
+C:\Users\S\Documents\ICS3U\Assignments\FallingObjectsSasha\FallingObjectsSasha\obj\Debug\FallingObjectsSasha.csproj.GenerateResource.cache
+C:\Users\S\Documents\ICS3U\Assignments\FallingObjectsSasha\FallingObjectsSasha\obj\Debug\FallingObjectsSasha.csproj.CoreCompileInputs.cache
+C:\Users\S\Documents\ICS3U\Assignments\FallingObjectsSasha\FallingObjectsSasha\obj\Debug\FallingObjectsSasha.exe
+C:\Users\S\Documents\ICS3U\Assignments\FallingObjectsSasha\FallingObjectsSasha\obj\Debug\FallingObjectsSasha.pdb
