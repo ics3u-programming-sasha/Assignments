@@ -35,18 +35,17 @@ namespace FallingObjectsSasha
                 {
                     lblHeight.Text = "Already hit the ground";
                 }
-                    //this only allows positive numbers to be entered
-                    if (Convert.ToDouble(txtTime.Text) < 0)
-                    {
+                //this only allows positive numbers to be entered
+                if (Convert.ToDouble(txtTime.Text) < 0)
+                {
                     lblHeight.Text = "Invalid Input";
 
-                    }
-            }     
+                }
+            }
             else
             {
-               lblHeight.Text = "Invalid Input";
+                lblHeight.Text = "Invalid Input";
             }
-
         }
 
         //this declares the equation that is going to be used in the calculation

@@ -8,3 +8,13 @@ C:\Users\S\Documents\ICS3U\Assignments\FallingObjectsSasha\FallingObjectsSasha\o
 C:\Users\S\Documents\ICS3U\Assignments\FallingObjectsSasha\FallingObjectsSasha\obj\Debug\FallingObjectsSasha.csproj.CoreCompileInputs.cache
 C:\Users\S\Documents\ICS3U\Assignments\FallingObjectsSasha\FallingObjectsSasha\obj\Debug\FallingObjectsSasha.exe
 C:\Users\S\Documents\ICS3U\Assignments\FallingObjectsSasha\FallingObjectsSasha\obj\Debug\FallingObjectsSasha.pdb
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\FallingObjectsSasha\FallingObjectsSasha\bin\Debug\FallingObjectsSasha.exe.config
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\FallingObjectsSasha\FallingObjectsSasha\bin\Debug\FallingObjectsSasha.exe
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\FallingObjectsSasha\FallingObjectsSasha\bin\Debug\FallingObjectsSasha.pdb
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\FallingObjectsSasha\FallingObjectsSasha\obj\Debug\FallingObjectsSasha.csprojAssemblyReference.cache
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\FallingObjectsSasha\FallingObjectsSasha\obj\Debug\FallingObjectsSasha.frmFallingObjects.resources
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\FallingObjectsSasha\FallingObjectsSasha\obj\Debug\FallingObjectsSasha.Properties.Resources.resources
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\FallingObjectsSasha\FallingObjectsSasha\obj\Debug\FallingObjectsSasha.csproj.GenerateResource.cache
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\FallingObjectsSasha\FallingObjectsSasha\obj\Debug\FallingObjectsSasha.csproj.CoreCompileInputs.cache
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\FallingObjectsSasha\FallingObjectsSasha\obj\Debug\FallingObjectsSasha.exe
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\FallingObjectsSasha\FallingObjectsSasha\obj\Debug\FallingObjectsSasha.pdb
