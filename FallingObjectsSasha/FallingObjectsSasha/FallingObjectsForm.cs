@@ -13,8 +13,9 @@ namespace FallingObjectsSasha
 {
     public partial class frmFallingObjects : Form
     {
-        const double g = 9.8;
-        const double a = 4.519;
+        // declare constant
+        const double GRAVITY = 9.8;
+
         public frmFallingObjects()
         {
             InitializeComponent();
@@ -23,12 +24,14 @@ namespace FallingObjectsSasha
         //this allows for the calculation to be made but only for a valid input
         private void BtnCalculate_Click(object sender, EventArgs e)
         {
+            // declare local variable
+            double time;
+
             //this only allows numbers to be entered
-            double t;
-            if (double.TryParse(txtTime.Text, out t))
+            if (double.TryParse(txtTime.Text, out time))
             {
-                double d = FallingObjects(t);
-                lblHeight.Text = d.ToString("n") + "m";
+                double height = FallingObjects(time);
+                lblHeight.Text = height.ToString("n") + " m";
 
                 //this only allows times in which the object is above the ground to be entered
                 if (Convert.ToDouble(txtTime.Text) > 4.5176)
@@ -49,10 +52,10 @@ namespace FallingObjectsSasha
         }
 
         //this declares the equation that is going to be used in the calculation
-        private double FallingObjects(double t)
+        private double FallingObjects(double time)
         {
-            double d = 100 - (0.5 * g * Math.Pow(t, 2));
-            return d;
+            double distance = 100 - (0.5 * GRAVITY * Math.Pow(time, 2));
+            return distance;
         }
     }
 }
