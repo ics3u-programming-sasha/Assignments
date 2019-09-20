@@ -48,7 +48,6 @@
             this.lblEnterTime.Size = new System.Drawing.Size(502, 25);
             this.lblEnterTime.TabIndex = 0;
             this.lblEnterTime.Text = "Enter the time (in seconds) since you released the object:";
-            this.lblEnterTime.Click += new System.EventHandler(this.LblEnterTime_Click);
             // 
             // txtTime
             // 
