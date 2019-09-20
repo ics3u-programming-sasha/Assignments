@@ -33,8 +33,8 @@
             this.lblObjectHeight = new System.Windows.Forms.Label();
             this.lblHeight = new System.Windows.Forms.Label();
             this.btnCalculate = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.picGravity = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picGravity)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEnterTime
@@ -92,15 +92,15 @@
             this.btnCalculate.UseVisualStyleBackColor = false;
             this.btnCalculate.Click += new System.EventHandler(this.BtnCalculate_Click);
             // 
-            // pictureBox1
+            // picGravity
             // 
-            this.pictureBox1.Image = global::FallingObjectsSasha.Properties.Resources.Gravity;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(816, 464);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.picGravity.Image = global::FallingObjectsSasha.Properties.Resources.Gravity;
+            this.picGravity.Location = new System.Drawing.Point(0, 0);
+            this.picGravity.Name = "picGravity";
+            this.picGravity.Size = new System.Drawing.Size(816, 464);
+            this.picGravity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picGravity.TabIndex = 5;
+            this.picGravity.TabStop = false;
             // 
             // frmFallingObjects
             // 
@@ -112,10 +112,10 @@
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.txtTime);
             this.Controls.Add(this.lblEnterTime);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picGravity);
             this.Name = "frmFallingObjects";
             this.Text = "Falling Objects by Sasha";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGravity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,7 +128,7 @@
         private System.Windows.Forms.Label lblObjectHeight;
         private System.Windows.Forms.Label lblHeight;
         private System.Windows.Forms.Button btnCalculate;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picGravity;
     }
 }
 
