@@ -1,0 +1,10 @@
+C:\Users\S\Documents\ICS3U\Assignments\PizzaOrderSasha\PizzaOrderSasha\bin\Debug\PizzaOrderSasha.exe.config
+C:\Users\S\Documents\ICS3U\Assignments\PizzaOrderSasha\PizzaOrderSasha\bin\Debug\PizzaOrderSasha.exe
+C:\Users\S\Documents\ICS3U\Assignments\PizzaOrderSasha\PizzaOrderSasha\bin\Debug\PizzaOrderSasha.pdb
+C:\Users\S\Documents\ICS3U\Assignments\PizzaOrderSasha\PizzaOrderSasha\obj\Debug\PizzaOrderSasha.csprojAssemblyReference.cache
+C:\Users\S\Documents\ICS3U\Assignments\PizzaOrderSasha\PizzaOrderSasha\obj\Debug\PizzaOrderSasha.frmPizzaOrder.resources
+C:\Users\S\Documents\ICS3U\Assignments\PizzaOrderSasha\PizzaOrderSasha\obj\Debug\PizzaOrderSasha.Properties.Resources.resources
+C:\Users\S\Documents\ICS3U\Assignments\PizzaOrderSasha\PizzaOrderSasha\obj\Debug\PizzaOrderSasha.csproj.GenerateResource.cache
+C:\Users\S\Documents\ICS3U\Assignments\PizzaOrderSasha\PizzaOrderSasha\obj\Debug\PizzaOrderSasha.csproj.CoreCompileInputs.cache
+C:\Users\S\Documents\ICS3U\Assignments\PizzaOrderSasha\PizzaOrderSasha\obj\Debug\PizzaOrderSasha.exe
+C:\Users\S\Documents\ICS3U\Assignments\PizzaOrderSasha\PizzaOrderSasha\obj\Debug\PizzaOrderSasha.pdb
