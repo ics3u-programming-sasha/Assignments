@@ -63,7 +63,7 @@ namespace PizzaOrderSasha
 
             if (uSize == 1)
             {
-                // make the size equal to $6.99
+                // make the size equal to medium
                 size = MEDIUM;
 
                 // display the user's size selecion and price
@@ -72,7 +72,7 @@ namespace PizzaOrderSasha
 
             else if (uSize == 2)
             {
-                // make the size equal to $9.99
+                // make the size equal to large
                 size = LARGE;
 
                 // display the user's size selecion and price
@@ -81,7 +81,7 @@ namespace PizzaOrderSasha
 
             else
             {
-                // make the size equal to $12.99
+                // make the size equal to extra large
                 size = EXTRA_LARGE;
 
                 // display the user's size selecion and price
@@ -93,7 +93,7 @@ namespace PizzaOrderSasha
 
             if (uToppings == 1)
             {
-                // make the toppings equal to $0.75
+                // make the toppings equal to one topping
                 toppings = ONE_TOPPING;
 
                 // display the user's toppings selecion and price
@@ -102,7 +102,7 @@ namespace PizzaOrderSasha
 
             else if (uToppings == 2)
             {
-                // make the toppings equal to $1.35
+                // make the toppings equal to two toppings
                 toppings = TWO_TOPPING;
 
                 // display the user's toppings selecion and price
@@ -111,7 +111,7 @@ namespace PizzaOrderSasha
 
             else if (uToppings == 3)
             {
-                // make the toppings equal to $2.15
+                // make the toppings equal to three toppings
                 toppings = THREE_TOPPING;
 
                 // display the user's toppings selecion and price
@@ -120,7 +120,7 @@ namespace PizzaOrderSasha
 
             else
             {
-                // make the toppings equal to $2.75
+                // make the toppings equal to four toppings
                 toppings = FOUR_TOPPING;
 
                 // display the user's toppings selecion and price
@@ -132,7 +132,7 @@ namespace PizzaOrderSasha
 
             if (uSoftDrink == 1)
             {
-                // make the soft drink equal to $1.50
+                // make the soft drink equal to yes
                 softDrink = YES_SOFT_DRINK;
 
                 // display the user's soft drink selecion and price
@@ -141,7 +141,7 @@ namespace PizzaOrderSasha
 
             else
             {
-                // make the soft drink equal to $0
+                // make the soft drink equal to no
                 softDrink = NO_SOFT_DRINK;
 
                 // display the user's soft drink selecion and price
@@ -153,7 +153,7 @@ namespace PizzaOrderSasha
 
             if (uDelivery == 1)
             {
-                // make the delivery equal to $5
+                // make the delivery equal to yes
                 delivery = YES_DELIVERY;
 
                 // display the user's delivery selecion and price
@@ -162,7 +162,7 @@ namespace PizzaOrderSasha
 
             else
             {
-                // make the delivery equal to $0
+                // make the delivery equal to no
                 delivery = NO_DELIVERY;
 
                 // display the user's delivery selecion and price
@@ -177,7 +177,7 @@ namespace PizzaOrderSasha
                 // make the tip equal to $0
                 tip = NO_TIP;
 
-                // display the user's tip selecion and price
+                // display the user's tip selecion and amount
                 lblFinalTip.Text = "No tip: $0";
             }
 
@@ -186,7 +186,7 @@ namespace PizzaOrderSasha
                 // make the tip equal to $1
                 tip = ONE_TIP;
 
-                // display the user's tip selecion and price
+                // display the user's tip selecion and amount
                 lblFinalTip.Text = "Tip: $1";
             }
 
@@ -195,7 +195,7 @@ namespace PizzaOrderSasha
                 // make the tip equal to $2
                 tip = TWO_TIP;
 
-                // display the user's tip selecion and price
+                // display the user's tip selecion and amount
                 lblFinalTip.Text = "Tip: $2";
             }
 
@@ -204,7 +204,7 @@ namespace PizzaOrderSasha
                 // make the tip equal to $3
                 tip = THREE_TIP;
 
-                // display the user's tip selecion and price
+                // display the user's tip selecion and amount
                 lblFinalTip.Text = "Tip: $3";
             }
 
@@ -213,7 +213,7 @@ namespace PizzaOrderSasha
 
             if (uProvince == 1)
             {
-                // make the province equal to 0.05
+                // make the province equal to the tax rate of Alberta
                 province = ALBERTA;
 
                 // display the user's province selecion and tax rate
@@ -225,7 +225,7 @@ namespace PizzaOrderSasha
 
             else if (uProvince == 2)
             {
-                // make the province equal to 0.11
+                // make the province equal to the tax rate of Saskatchewan
                 province = SASKATCHEWAN;
 
                 // display the user's province selecion and tax rate
@@ -236,7 +236,7 @@ namespace PizzaOrderSasha
 
             else if (uProvince == 3)
             {
-                // make the province equal to 0.12
+                // make the province equal to the tax rate of British Columbia
                 province = BRITISH_COLUMBIA;
 
                 // display the user's province selecion and tax rate
@@ -247,7 +247,7 @@ namespace PizzaOrderSasha
 
             else if (uProvince == 4)
             {
-                // make the province equal to 0.13
+                // make the province equal to the tax rate of Ontario
                 province = ONTARIO;
 
                 // display the user's province selecion and tax rate
@@ -258,7 +258,7 @@ namespace PizzaOrderSasha
 
             else
             {
-                // make the province equal to 0.15
+                // make the province equal to the tax rate of Quebec
                 province = QUEBEC;
 
                 // display the user's province selecion and tax rate
