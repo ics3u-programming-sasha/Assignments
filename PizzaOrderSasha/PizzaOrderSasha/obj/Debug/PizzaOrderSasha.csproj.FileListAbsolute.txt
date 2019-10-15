@@ -8,3 +8,13 @@ C:\Users\S\Documents\ICS3U\Assignments\PizzaOrderSasha\PizzaOrderSasha\obj\Debug
 C:\Users\S\Documents\ICS3U\Assignments\PizzaOrderSasha\PizzaOrderSasha\obj\Debug\PizzaOrderSasha.csproj.CoreCompileInputs.cache
 C:\Users\S\Documents\ICS3U\Assignments\PizzaOrderSasha\PizzaOrderSasha\obj\Debug\PizzaOrderSasha.exe
 C:\Users\S\Documents\ICS3U\Assignments\PizzaOrderSasha\PizzaOrderSasha\obj\Debug\PizzaOrderSasha.pdb
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\PizzaOrderSasha\PizzaOrderSasha\bin\Debug\PizzaOrderSasha.exe.config
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\PizzaOrderSasha\PizzaOrderSasha\bin\Debug\PizzaOrderSasha.exe
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\PizzaOrderSasha\PizzaOrderSasha\bin\Debug\PizzaOrderSasha.pdb
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\PizzaOrderSasha\PizzaOrderSasha\obj\Debug\PizzaOrderSasha.csprojAssemblyReference.cache
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\PizzaOrderSasha\PizzaOrderSasha\obj\Debug\PizzaOrderSasha.frmPizzaOrder.resources
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\PizzaOrderSasha\PizzaOrderSasha\obj\Debug\PizzaOrderSasha.Properties.Resources.resources
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\PizzaOrderSasha\PizzaOrderSasha\obj\Debug\PizzaOrderSasha.csproj.GenerateResource.cache
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\PizzaOrderSasha\PizzaOrderSasha\obj\Debug\PizzaOrderSasha.csproj.CoreCompileInputs.cache
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\PizzaOrderSasha\PizzaOrderSasha\obj\Debug\PizzaOrderSasha.exe
+N:\Classes\Sem1-Fall2019\ICS3U Programming\MSasha (s272033)\Assignments\PizzaOrderSasha\PizzaOrderSasha\obj\Debug\PizzaOrderSasha.pdb

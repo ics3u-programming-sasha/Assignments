@@ -32,6 +32,28 @@ namespace PizzaOrderSasha
             // show the selections label
             lblSelections.Show();
 
+            // declare constants 
+            const double MEDIUM = 6.99;
+            const double LARGE = 9.99;
+            const double EXTRA_LARGE = 12.99;
+            const double ONE_TOPPING = 0.75;
+            const double TWO_TOPPING = 1.35;
+            const double THREE_TOPPING = 2.15;
+            const double FOUR_TOPPING = 2.75;
+            const double YES_SOFT_DRINK = 1.50;
+            const double NO_SOFT_DRINK = 0;
+            const double YES_DELIVERY = 5;
+            const double NO_DELIVERY = 0;
+            const double NO_TIP = 0;
+            const double ONE_TIP = 1;
+            const double TWO_TIP = 2;
+            const double THREE_TIP = 3;
+            const double ALBERTA = 0.05;
+            const double SASKATCHEWAN = 0.11;
+            const double BRITISH_COLUMBIA = 0.12;
+            const double ONTARIO = 0.13;
+            const double QUEBEC = 0.15;
+
             // declare local variables
             double uSize, size, uToppings, toppings, uSoftDrink, softDrink, uDelivery, 
             delivery, uTip, tip, uProvince, province, subtotal, subD, tax, subT, total;
@@ -42,7 +64,7 @@ namespace PizzaOrderSasha
             if (uSize == 1)
             {
                 // make the size equal to $6.99
-                size = 6.99;
+                size = MEDIUM;
 
                 // display the user's size selecion and price
                 lblFinalSize.Text = "Medium size: $6.99";
@@ -51,7 +73,7 @@ namespace PizzaOrderSasha
             else if (uSize == 2)
             {
                 // make the size equal to $9.99
-                size = 9.99;
+                size = LARGE;
 
                 // display the user's size selecion and price
                 lblFinalSize.Text = "Large size: $9.99";
@@ -60,7 +82,7 @@ namespace PizzaOrderSasha
             else
             {
                 // make the size equal to $12.99
-                size = 12.99;
+                size = EXTRA_LARGE;
 
                 // display the user's size selecion and price
                 lblFinalSize.Text = "Extra Large size: $12.99";
@@ -72,7 +94,7 @@ namespace PizzaOrderSasha
             if (uToppings == 1)
             {
                 // make the toppings equal to $0.75
-                toppings = 0.75;
+                toppings = ONE_TOPPING;
 
                 // display the user's toppings selecion and price
                 lblFinalToppings.Text = "1 Topping: $0.75";
@@ -81,7 +103,7 @@ namespace PizzaOrderSasha
             else if (uToppings == 2)
             {
                 // make the toppings equal to $1.35
-                toppings = 1.35;
+                toppings = TWO_TOPPING;
 
                 // display the user's toppings selecion and price
                 lblFinalToppings.Text = "2 Toppings: $1.35";
@@ -90,7 +112,7 @@ namespace PizzaOrderSasha
             else if (uToppings == 3)
             {
                 // make the toppings equal to $2.15
-                toppings = 2.15;
+                toppings = THREE_TOPPING;
 
                 // display the user's toppings selecion and price
                 lblFinalToppings.Text = "3 Toppings: $2.15";
@@ -99,7 +121,7 @@ namespace PizzaOrderSasha
             else
             {
                 // make the toppings equal to $2.75
-                toppings = 2.75;
+                toppings = FOUR_TOPPING;
 
                 // display the user's toppings selecion and price
                 lblFinalToppings.Text = "4 Toppings: $2.75";
@@ -111,7 +133,7 @@ namespace PizzaOrderSasha
             if (uSoftDrink == 1)
             {
                 // make the soft drink equal to $1.50
-                softDrink = 1.50;
+                softDrink = YES_SOFT_DRINK;
 
                 // display the user's soft drink selecion and price
                 lblFinalDrink.Text = "Soft Drink: $1.50";
@@ -120,7 +142,7 @@ namespace PizzaOrderSasha
             else
             {
                 // make the soft drink equal to $0
-                softDrink = 0;
+                softDrink = NO_SOFT_DRINK;
 
                 // display the user's soft drink selecion and price
                 lblFinalDrink.Text = "No Soft Drink: $0";
@@ -132,7 +154,7 @@ namespace PizzaOrderSasha
             if (uDelivery == 1)
             {
                 // make the delivery equal to $5
-                delivery = 5;
+                delivery = YES_DELIVERY;
 
                 // display the user's delivery selecion and price
                 lblFinalDelivery.Text = "Delivery: $5";
@@ -141,7 +163,7 @@ namespace PizzaOrderSasha
             else
             {
                 // make the delivery equal to $0
-                delivery = 0;
+                delivery = NO_DELIVERY;
 
                 // display the user's delivery selecion and price
                 lblFinalDelivery.Text = "No Delivery: $0";
@@ -153,7 +175,7 @@ namespace PizzaOrderSasha
             if (uTip == 0)
             {
                 // make the tip equal to $0
-                tip = 0;
+                tip = NO_TIP;
 
                 // display the user's tip selecion and price
                 lblFinalTip.Text = "No tip: $0";
@@ -162,7 +184,7 @@ namespace PizzaOrderSasha
             else if (uTip == 1)
             {
                 // make the tip equal to $1
-                tip = 1;
+                tip = ONE_TIP;
 
                 // display the user's tip selecion and price
                 lblFinalTip.Text = "Tip: $1";
@@ -171,7 +193,7 @@ namespace PizzaOrderSasha
             else if (uTip == 2)
             {
                 // make the tip equal to $2
-                tip = 2;
+                tip = TWO_TIP;
 
                 // display the user's tip selecion and price
                 lblFinalTip.Text = "Tip: $2";
@@ -180,7 +202,7 @@ namespace PizzaOrderSasha
             else
             {
                 // make the tip equal to $3
-                tip = 3;
+                tip = THREE_TIP;
 
                 // display the user's tip selecion and price
                 lblFinalTip.Text = "Tip: $3";
@@ -192,7 +214,7 @@ namespace PizzaOrderSasha
             if (uProvince == 1)
             {
                 // make the province equal to 0.05
-                province = 0.05;
+                province = ALBERTA;
 
                 // display the user's province selecion and tax rate
                 lblFinalProvince1.Text = "Alberta, Northwest Territories, Yukon,";
@@ -204,7 +226,7 @@ namespace PizzaOrderSasha
             else if (uProvince == 2)
             {
                 // make the province equal to 0.11
-                province = 0.11;
+                province = SASKATCHEWAN;
 
                 // display the user's province selecion and tax rate
                 lblFinalProvince1.Text = "Saskatchewan: 11% tax rate";
@@ -215,7 +237,7 @@ namespace PizzaOrderSasha
             else if (uProvince == 3)
             {
                 // make the province equal to 0.12
-                province = 0.12;
+                province = BRITISH_COLUMBIA;
 
                 // display the user's province selecion and tax rate
                 lblFinalProvince1.Text = "British Columbia: 12% tax rate";
@@ -226,7 +248,7 @@ namespace PizzaOrderSasha
             else if (uProvince == 4)
             {
                 // make the province equal to 0.13
-                province = 0.13;
+                province = ONTARIO;
 
                 // display the user's province selecion and tax rate
                 lblFinalProvince1.Text = "Ontario, Manitoba: 13% tax rate";
@@ -237,7 +259,7 @@ namespace PizzaOrderSasha
             else
             {
                 // make the province equal to 0.15
-                province = 0.15;
+                province = QUEBEC;
 
                 // display the user's province selecion and tax rate
                 lblFinalProvince1.Text = "Quebec, New Brunswick, Prince Edward";
