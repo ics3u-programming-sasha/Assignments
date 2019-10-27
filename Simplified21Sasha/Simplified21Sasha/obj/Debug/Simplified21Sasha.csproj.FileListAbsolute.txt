@@ -1,0 +1,11 @@
+C:\Users\S\Documents\ICS3U\Assignments\Simplified21Sasha\Simplified21Sasha\bin\Debug\Simplified21Sasha.exe.config
+C:\Users\S\Documents\ICS3U\Assignments\Simplified21Sasha\Simplified21Sasha\bin\Debug\Simplified21Sasha.exe
+C:\Users\S\Documents\ICS3U\Assignments\Simplified21Sasha\Simplified21Sasha\bin\Debug\Simplified21Sasha.pdb
+C:\Users\S\Documents\ICS3U\Assignments\Simplified21Sasha\Simplified21Sasha\obj\Debug\Simplified21Sasha.csprojAssemblyReference.cache
+C:\Users\S\Documents\ICS3U\Assignments\Simplified21Sasha\Simplified21Sasha\obj\Debug\Simplified21Sasha.Properties.Resources.resources
+C:\Users\S\Documents\ICS3U\Assignments\Simplified21Sasha\Simplified21Sasha\obj\Debug\Simplified21Sasha.csproj.GenerateResource.cache
+C:\Users\S\Documents\ICS3U\Assignments\Simplified21Sasha\Simplified21Sasha\obj\Debug\Simplified21Sasha.csproj.CoreCompileInputs.cache
+C:\Users\S\Documents\ICS3U\Assignments\Simplified21Sasha\Simplified21Sasha\obj\Debug\Simplified21Sasha.exe
+C:\Users\S\Documents\ICS3U\Assignments\Simplified21Sasha\Simplified21Sasha\obj\Debug\Simplified21Sasha.pdb
+C:\Users\S\Documents\ICS3U\Assignments\Simplified21Sasha\Simplified21Sasha\obj\Debug\Simplified21Sasha.Simplified21Form2.resources
+C:\Users\S\Documents\ICS3U\Assignments\Simplified21Sasha\Simplified21Sasha\obj\Debug\Simplified21Sasha.Simplified21Form1.resources
