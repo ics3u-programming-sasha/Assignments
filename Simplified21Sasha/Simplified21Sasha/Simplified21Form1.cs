@@ -142,65 +142,68 @@ namespace Simplified21Sasha
         {
             this.btnDeal.Enabled = false;
             this.btnDeal.Visible = false;
+            this.btnHit7.Visible = true;
+            this.btnStay7.Visible = true;
+            this.btnHit7.Enabled = true;
+            this.btnStay7.Enabled = true;
             this.lblDealer.Show();
             this.lblUser.Show();
+            this.picCard.Show();
+            this.picCard2.Show();
+            this.picCCard.Show();
+            this.picCCard2.Show();
 
             uRandom = rnd.Next(MIN_NUM, MAX_NUM + 1);
-
             uRandomCard = rnd.Next(CMIN_NUM, CMAX_NUM + 1);
+            uRandom2 = rnd.Next(MIN_NUM, MAX_NUM + 1);
+            cRandom = rnd.Next(MIN_NUM, MAX_NUM + 1);
+            cRandomCard = rnd.Next(CMIN_NUM, CMAX_NUM + 1);
+
+            uRandomCard2 = rnd.Next(CMIN_NUM, CMAX_NUM + 1);
 
             if (uRandom == 1)
             {
                 this.picCard.Image = Properties.Resources.Ace;
-                this.picCard.Show();
             }
 
             else if (uRandom == 2)
             {
                 this.picCard.Image = Properties.Resources.Two;
-                this.picCard.Show();
             }
 
             else if (uRandom == 3)
             {
                 this.picCard.Image = Properties.Resources.Three;
-                this.picCard.Show();
             }
 
             else if (uRandom == 4)
             {
-                this.picCard.Image = Properties.Resources.Four;
-                this.picCard.Show();
+                this.picCard.Image = Properties.Resources.Four; 
             }
 
             else if (uRandom == 5)
             {
                 this.picCard.Image = Properties.Resources.Five;
-                this.picCard.Show();
             }
 
             else if (uRandom == 6)
             {
-                this.picCard.Image = Properties.Resources.Six;
-                this.picCard.Show();
+                this.picCard.Image = Properties.Resources.Six; 
             }
 
             else if (uRandom == 7)
             {
                 this.picCard.Image = Properties.Resources.Seven;
-                this.picCard.Show();
             }
 
             else if (uRandom == 8)
             {
-                this.picCard.Image = Properties.Resources.Eight;
-                this.picCard.Show();
+                this.picCard.Image = Properties.Resources.Eight; 
             }
 
             else if (uRandom == 9)
             {
                 this.picCard.Image = Properties.Resources.Nine;
-                this.picCard.Show();
             }
 
             else if (uRandom == 10)
@@ -209,84 +212,67 @@ namespace Simplified21Sasha
                 if (uRandomCard == 1)
                 {
                     this.picCard.Image = Properties.Resources.Ten;
-                    this.picCard.Show();
                 }
 
                 else if (uRandomCard == 2)
                 {
                     this.picCard.Image = Properties.Resources.Jack;
-                    this.picCard.Show();
                 }
 
                 else if (uRandomCard == 3)
                 {
                     this.picCard.Image = Properties.Resources.Queen;
-                    this.picCard.Show();
                 }
 
                 else if (uRandomCard == 4)
                 {
                     this.picCard.Image = Properties.Resources.King;
-                    this.picCard.Show();
                 }
             }
-
-            uRandom2 = rnd.Next(MIN_NUM, MAX_NUM + 1);
-
-            uRandomCard2 = rnd.Next(CMIN_NUM, CMAX_NUM + 1);
 
             if (uRandom2 == 1)
             {
                 this.picCard2.Image = Properties.Resources.Ace;
-                this.picCard2.Show();
             }
 
             else if (uRandom2 == 2)
             {
                 this.picCard2.Image = Properties.Resources.Two;
-                this.picCard2.Show();
             }
 
             else if (uRandom2 == 3)
             {
-                this.picCard2.Image = Properties.Resources.Three;
-                this.picCard2.Show();
+                this.picCard2.Image = Properties.Resources.Three; 
             }
 
             else if (uRandom2 == 4)
             {
                 this.picCard2.Image = Properties.Resources.Four;
-                this.picCard2.Show();
             }
 
             else if (uRandom2 == 5)
             {
                 this.picCard2.Image = Properties.Resources.Five;
-                this.picCard2.Show();
             }
 
             else if (uRandom2 == 6)
             {
-                this.picCard2.Image = Properties.Resources.Six;
-                this.picCard2.Show();
+                this.picCard2.Image = Properties.Resources.Six; 
             }
 
             else if (uRandom2 == 7)
             {
                 this.picCard2.Image = Properties.Resources.Seven;
-                this.picCard2.Show();
             }
 
             else if (uRandom2 == 8)
             {
                 this.picCard2.Image = Properties.Resources.Eight;
-                this.picCard2.Show();
             }
 
             else if (uRandom2 == 9)
             {
                 this.picCard2.Image = Properties.Resources.Nine;
-                this.picCard2.Show();
             }
 
             else if (uRandom2 == 10)
@@ -295,44 +281,31 @@ namespace Simplified21Sasha
                 if (uRandomCard2 == 1)
                 {
                     this.picCard2.Image = Properties.Resources.Ten;
-                    this.picCard2.Show();
                 }
 
                 else if (uRandomCard2 == 2)
                 {
                     this.picCard2.Image = Properties.Resources.Jack;
-                    this.picCard2.Show();
                 }
 
                 else if (uRandomCard2 == 3)
                 {
                     this.picCard2.Image = Properties.Resources.Queen;
-                    this.picCard2.Show();
                 }
 
                 else if (uRandomCard2 == 4)
                 {
                     this.picCard2.Image = Properties.Resources.King;
-                    this.picCard2.Show();
                 }
             }
 
-            cRandom = rnd.Next(MIN_NUM, MAX_NUM+ 1);
-
-            cRandomCard = rnd.Next(CMIN_NUM, CMAX_NUM + 1);
 
             this.picCCard2.Image = Properties.Resources.Back;
-            this.picCCard2.Show();
-
-            this.btnHit7.Visible = true;
-            this.btnStay7.Visible = true;
-            this.btnHit7.Enabled = true;
-            this.btnStay7.Enabled = true;
 
             if (cRandom == 1)
             {
                 this.picCCard.Image = Properties.Resources.Ace;
-                this.picCCard.Show();
+    
                 this.lblInsurance.Show();
                 this.btnIYes.Visible = true;
                 this.btnINo.Visible = true;
@@ -352,49 +325,41 @@ namespace Simplified21Sasha
             else if (cRandom == 2)
             {
                 this.picCCard.Image = Properties.Resources.Two;
-                this.picCCard.Show();
             }
 
             else if (cRandom == 3)
             {
                 this.picCCard.Image = Properties.Resources.Three;
-                this.picCCard.Show();
             }
 
             else if (cRandom == 4)
             {
                 this.picCCard.Image = Properties.Resources.Four;
-                this.picCCard.Show();
             }
 
             else if (cRandom == 5)
             {
                 this.picCCard.Image = Properties.Resources.Five;
-                this.picCCard.Show();
             }
 
             else if (cRandom == 6)
             {
                 this.picCCard.Image = Properties.Resources.Six;
-                this.picCCard.Show();
             }
 
             else if (cRandom == 7)
             {
                 this.picCCard.Image = Properties.Resources.Seven;
-                this.picCCard.Show();
             }
 
             else if (cRandom == 8)
             {
                 this.picCCard.Image = Properties.Resources.Eight;
-                this.picCCard.Show();
             }
 
             else if (cRandom == 9)
             {
                 this.picCCard.Image = Properties.Resources.Nine;
-                this.picCCard.Show();
             }
 
             else if (cRandom == 10)
@@ -403,25 +368,21 @@ namespace Simplified21Sasha
                 if (cRandom == 1)
                 {
                     this.picCCard.Image = Properties.Resources.Ten;
-                    this.picCCard.Show();
                 }
 
                 else if (cRandomCard == 2)
                 {
                     this.picCCard.Image = Properties.Resources.Jack;
-                    this.picCCard.Show();
                 }
 
                 else if (cRandomCard == 3)
                 {
                     this.picCCard.Image = Properties.Resources.Queen;
-                    this.picCCard.Show();
                 }
 
                 else if (cRandomCard == 4)
                 {
                     this.picCCard.Image = Properties.Resources.King;
-                    this.picCCard.Show();
                 }
             }
 
@@ -448,6 +409,7 @@ namespace Simplified21Sasha
                         this.btnHit.Visible = false;
                         this.btnStay.Visible = false;
                     }
+
                     else
                     {
                         this.lblSplit.Hide();
@@ -457,6 +419,7 @@ namespace Simplified21Sasha
                         this.btnNo.Visible = false;
                     }
                 }
+
                 else
                 {
                     this.lblSplit.Show();
@@ -477,14 +440,18 @@ namespace Simplified21Sasha
             this.btnYes.Visible = false;
             this.btnNo.Enabled = false;
             this.btnNo.Visible = false;
+            this.picCard3.Show();
+            this.picCard2.Show();
+            this.picCCard3.Show();
 
             picCard2.Location = new Point(540, 285);
 
             uRandom3 = rnd.Next(MIN_NUM, MAX_NUM + 1);
             uRandomCard3 = rnd.Next(CMIN_NUM, CMAX_NUM + 1);
-
             uRandom2 = rnd.Next(MIN_NUM, MAX_NUM + 1);
             uRandomCard4 = rnd.Next(CMIN_NUM, CMAX_NUM + 1);
+            cRandom3 = rnd.Next(MIN_NUM, MAX_NUM + 1);
+            cRandomCard3 = rnd.Next(CMIN_NUM, CMAX_NUM + 1);
 
 
             if (uRandom == 1)
@@ -493,55 +460,46 @@ namespace Simplified21Sasha
                 if (uRandom3 == 1)
                 {
                     this.picCard3.Image = Properties.Resources.Ace;
-                    this.picCard3.Show();
                 }
 
                 else if (uRandom3 == 2)
                 {
                     this.picCard3.Image = Properties.Resources.Two;
-                    this.picCard3.Show();
                 }
 
                 else if (uRandom3 == 3)
                 {
                     this.picCard3.Image = Properties.Resources.Three;
-                    this.picCard3.Show();
                 }
 
                 else if (uRandom3 == 4)
                 {
                     this.picCard3.Image = Properties.Resources.Four;
-                    this.picCard3.Show();
                 }
 
                 else if (uRandom3 == 5)
                 {
                     this.picCard3.Image = Properties.Resources.Five;
-                    this.picCard3.Show();
                 }
 
                 else if (uRandom3 == 6)
                 {
                     this.picCard3.Image = Properties.Resources.Six;
-                    this.picCard3.Show();
                 }
 
                 else if (uRandom3 == 7)
                 {
                     this.picCard3.Image = Properties.Resources.Seven;
-                    this.picCard3.Show();
                 }
 
                 else if (uRandom3 == 8)
                 {
                     this.picCard3.Image = Properties.Resources.Eight;
-                    this.picCard3.Show();
                 }
 
                 else if (uRandom3 == 9)
                 {
                     this.picCard3.Image = Properties.Resources.Nine;
-                    this.picCard3.Show();
                 }
 
                 else if (uRandom3 == 10)
@@ -550,25 +508,21 @@ namespace Simplified21Sasha
                     if (uRandomCard3 == 1)
                     {
                         this.picCard3.Image = Properties.Resources.Ten;
-                        this.picCard3.Show();
                     }
 
                     else if (uRandomCard3 == 2)
                     {
                         this.picCard3.Image = Properties.Resources.Jack;
-                        this.picCard3.Show();
                     }
 
                     else if (uRandomCard3 == 3)
                     {
                         this.picCard3.Image = Properties.Resources.Queen;
-                        this.picCard3.Show();
                     }
 
                     else if (uRandomCard3 == 4)
                     {
                         this.picCard3.Image = Properties.Resources.King;
-                        this.picCard3.Show();
                     }
                 }
 
@@ -578,55 +532,46 @@ namespace Simplified21Sasha
                     if (uRandom2 == 1)
                     {
                         this.picCard2.Image = Properties.Resources.Ace;
-                        this.picCard2.Show();
                     }
 
                     else if (uRandom2 == 2)
                     {
                         this.picCard2.Image = Properties.Resources.Two;
-                        this.picCard2.Show();
                     }
 
                     else if (uRandom2 == 3)
                     {
                         this.picCard2.Image = Properties.Resources.Three;
-                        this.picCard2.Show();
                     }
 
                     else if (uRandom2 == 4)
                     {
                         this.picCard2.Image = Properties.Resources.Four;
-                        this.picCard2.Show();
                     }
 
                     else if (uRandom2 == 5)
                     {
                         this.picCard2.Image = Properties.Resources.Five;
-                        this.picCard2.Show();
                     }
 
                     else if (uRandom2 == 6)
                     {
                         this.picCard2.Image = Properties.Resources.Six;
-                        this.picCard2.Show();
                     }
 
                     else if (uRandom2 == 7)
                     {
                         this.picCard2.Image = Properties.Resources.Seven;
-                        this.picCard2.Show();
                     }
 
                     else if (uRandom2 == 8)
                     {
                         this.picCard2.Image = Properties.Resources.Eight;
-                        this.picCard2.Show();
                     }
 
                     else if (uRandom2 == 9)
                     {
                         this.picCard2.Image = Properties.Resources.Nine;
-                        this.picCard2.Show();
                     }
 
                     else if (uRandom2 == 10)
@@ -635,84 +580,76 @@ namespace Simplified21Sasha
                         if (uRandomCard4 == 1)
                         {
                             this.picCard2.Image = Properties.Resources.Ten;
-                            this.picCard2.Show();
                         }
 
                         else if (uRandomCard4 == 2)
                         {
                             this.picCard2.Image = Properties.Resources.Jack;
-                            this.picCard2.Show();
                         }
 
                         else if (uRandomCard4 == 3)
                         {
                             this.picCard2.Image = Properties.Resources.Queen;
-                            this.picCard2.Show();
                         }
 
                         else if (uRandomCard4 == 4)
                         {
                             this.picCard2.Image = Properties.Resources.King;
-                            this.picCard2.Show();
                         }
                     }
                 }
 
-                cRandom3 = rnd.Next(MIN_NUM, MAX_NUM + 1);
-                cRandomCard3 = rnd.Next(CMIN_NUM, CMAX_NUM + 1);
-
                 if (cRandom3 == 1)
                 {
                     this.picCCard3.Image = Properties.Resources.Ace;
-                    this.picCCard3.Show();
                 }
 
                 else if (cRandom3 == 2)
                 {
                     this.picCCard3.Image = Properties.Resources.Two;
-                    this.picCCard3.Show();
+
                 }
 
                 else if (cRandom3 == 3)
                 {
                     this.picCCard3.Image = Properties.Resources.Three;
-                    this.picCCard3.Show();
+
                 }
 
                 else if (cRandom3 == 4)
                 {
                     this.picCCard3.Image = Properties.Resources.Four;
-                    this.picCCard3.Show();
+
                 }
 
                 else if (cRandom3 == 5)
                 {
                     this.picCCard3.Image = Properties.Resources.Five;
-                    this.picCCard3.Show();
+
                 }
 
                 else if (cRandom3 == 6)
                 {
                     this.picCCard3.Image = Properties.Resources.Six;
-                    this.picCCard3.Show();
+
                 }
 
                 else if (cRandom3 == 7)
                 {
                     this.picCCard3.Image = Properties.Resources.Seven;
-                    this.picCCard3.Show();
+
                 }
 
                 else if (cRandom3 == 8)
                 {
                     this.picCCard3.Image = Properties.Resources.Eight;
-                    this.picCCard3.Show();
+
                 }
 
                 else if (cRandom3 == 9)
                 {
                     this.picCCard3.Image = Properties.Resources.Nine;
-                    this.picCCard3.Show();
+
                 }
 
                 else if (cRandom3 == 10)
@@ -721,25 +658,25 @@ namespace Simplified21Sasha
                     if (cRandomCard3 == 1)
                     {
                         this.picCCard3.Image = Properties.Resources.Ten;
-                        this.picCCard3.Show();
+    
                     }
 
                     else if (cRandomCard3 == 2)
                     {
                         this.picCCard3.Image = Properties.Resources.King;
-                        this.picCCard3.Show();
+    
                     }
 
                     else if (cRandomCard3 == 3)
                     {
                         this.picCCard3.Image = Properties.Resources.Queen;
-                        this.picCCard3.Show();
+    
                     }
 
                     else if (cRandomCard3 == 4)
                     {
                         this.picCCard3.Image = Properties.Resources.Jack;
-                        this.picCCard3.Show();
+    
                     }
                 }
             }
@@ -766,58 +703,60 @@ namespace Simplified21Sasha
             this.btnHit2.Enabled = true;
             this.btnStay2.Enabled = true;
 
+            this.picCard2.Show(); 
+
             if (uRandom2 == 1)
             {
                 this.picCard2.Image = Properties.Resources.Ace;
-                this.picCard2.Show();
+    
             }
 
             else if (uRandom2 == 2)
             {
                 this.picCard2.Image = Properties.Resources.Two;
-                this.picCard2.Show();
+    
             }
 
             else if (uRandom2 == 3)
             {
                 this.picCard2.Image = Properties.Resources.Three;
-                this.picCard2.Show();
+    
             }
 
             else if (uRandom2 == 4)
             {
                 this.picCard2.Image = Properties.Resources.Four;
-                this.picCard2.Show();
+    
             }
 
             else if (uRandom2 == 5)
             {
                 this.picCard2.Image = Properties.Resources.Five;
-                this.picCard2.Show();
+    
             }
 
             else if (uRandom2 == 6)
             {
                 this.picCard2.Image = Properties.Resources.Six;
-                this.picCard2.Show();
+    
             }
 
             else if (uRandom2 == 7)
             {
                 this.picCard2.Image = Properties.Resources.Seven;
-                this.picCard2.Show();
+    
             }
 
             else if (uRandom2 == 8)
             {
                 this.picCard2.Image = Properties.Resources.Eight;
-                this.picCard2.Show();
+    
             }
 
             else if (uRandom2 == 9)
             {
                 this.picCard2.Image = Properties.Resources.Nine;
-                this.picCard2.Show();
+    
             }
 
             else if (uRandom2 == 10)
@@ -826,25 +765,25 @@ namespace Simplified21Sasha
                 if (uRandomCard4 == 1)
                 {
                     this.picCard2.Image = Properties.Resources.Ten;
-                    this.picCard2.Show();
+        
                 }
 
                 else if (uRandomCard4 == 2)
                 {
                     this.picCard2.Image = Properties.Resources.Jack;
-                    this.picCard2.Show();
+        
                 }
 
                 else if (uRandomCard4 == 3)
                 {
                     this.picCard2.Image = Properties.Resources.Queen;
-                    this.picCard2.Show();
+        
                 }
 
                 else if (uRandomCard4 == 4)
                 {
                     this.picCard2.Image = Properties.Resources.King;
-                    this.picCard2.Show();
+        
                 }
             }
         }
@@ -4239,7 +4178,7 @@ namespace Simplified21Sasha
                 if (cRandomCard3 == 1)
                 {
                     this.picCCard3.Image = Properties.Resources.Ten;
-                    this.picCCard3.Show();
+
                 }
 
                 else if (cRandomCard3 == 2)
