@@ -386,7 +386,7 @@ namespace Simplified21Sasha
                 }
             }
 
-            if (cRandom == 1)
+            /* if (cRandom == 1)
             {
                 this.lblSplit.Hide();
                 this.btnYes.Enabled = false;
@@ -689,7 +689,7 @@ namespace Simplified21Sasha
                 this.btnStay.Enabled = true;
                 this.lblHitOrStay.Hide();
             }
-        }
+        */}
 
         private void BtnHit_Click(object sender, EventArgs e)
         {
@@ -1357,6 +1357,16 @@ namespace Simplified21Sasha
             uPoints = uRandom + uRandom2 + uRandom2 + uRandom5 + uRandom6 + uRandom5;
             cPoints = cRandom + cRandom2 + cRandom3 + cRandom4;
 
+            if (uPoints > 21)
+            {
+                totalBet = 0 - bet + insuranceBet;
+                MessageBox.Show("Bust! The dealer wins! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints), "Results");
+            }
+            else if (cPoints > 21)
+            {
+                totalBet = bet * 1.5 + insuranceBet;
+                MessageBox.Show("Bust for the dealer! You win! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints), "Results");
+            }
             if (uPoints == cPoints)
             {
                 totalBet = 0 + insuranceBet;
@@ -1371,16 +1381,6 @@ namespace Simplified21Sasha
             {
                 totalBet = bet * 1.5 + insuranceBet;
                 MessageBox.Show("Blackjack! You win! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints), "Results");
-            }
-            else if (uPoints > 21)
-            {
-                totalBet = 0 - bet + insuranceBet;
-                MessageBox.Show("Bust! The dealer wins! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints), "Results");
-            }
-            else if (cPoints > 21)
-            {
-                totalBet = bet * 1.5 + insuranceBet;
-                MessageBox.Show("Bust for the dealer! You win! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints), "Results");
             }
             else if (uPoints > cPoints)
             {
@@ -2778,7 +2778,17 @@ namespace Simplified21Sasha
             uPoints = uRandom + uRandom2;
             cPoints = cRandom + cRandom2 + cRandom3 + cRandom4;
 
-            if (uPoints == cPoints)
+            if (uPoints > 21)
+            {
+                totalBet = 0 - bet + insuranceBet;
+                MessageBox.Show("Bust! The dealer wins! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints), "Results");
+            }
+            else if (cPoints > 21)
+            {
+                totalBet = bet * 1.5 + insuranceBet;
+                MessageBox.Show("Bust for the dealer! You win! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints), "Results");
+            }
+            else if (uPoints == cPoints)
             {
                 totalBet = 0 + insuranceBet;
                 MessageBox.Show("Tie! " + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints), "Results");
@@ -2791,27 +2801,17 @@ namespace Simplified21Sasha
             else if (uPoints == 21)
             {
                 totalBet = bet * 1.5 + insuranceBet;
-                MessageBox.Show("Blackjack! You win! " + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
-            }
-            else if (uPoints > 21)
-            {
-                totalBet = 0 - bet + insuranceBet;
-                MessageBox.Show("Bust! The dealer wins! " + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
-            }
-            else if (cPoints > 21)
-            {
-                totalBet = bet * 1.5 + insuranceBet;
-                MessageBox.Show("Bust for the dealer! You win! " + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
+                MessageBox.Show("Blackjack! You win! " + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " +  Convert.ToString(uPoints), "Results");
             }
             else if (uPoints > cPoints)
             {
                 totalBet = bet * 1.5 + insuranceBet;
-                MessageBox.Show("You win !" + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
+                MessageBox.Show("You win !" + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " +  Convert.ToString(uPoints), "Results");
             }
             else if (uPoints < cPoints)
             {
                 totalBet = 0 - bet + insuranceBet;
-                MessageBox.Show("The dealer wins! " + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
+                MessageBox.Show("The dealer wins! " + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " +  Convert.ToString(uPoints), "Results");
             }
         }
 
@@ -3079,7 +3079,17 @@ namespace Simplified21Sasha
             uPoints = uRandom + uRandom2 + uRandom5 + uRandom8;
             cPoints = cRandom + cRandom2 + cRandom3 + cRandom4;
 
-            if (uPoints == cPoints)
+            if (uPoints > 21)
+            {
+                totalBet = 0 - bet + insuranceBet;
+                MessageBox.Show("Bust! The dealer wins! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
+            }
+            else if (cPoints > 21)
+            {
+                totalBet = bet * 1.5 + insuranceBet;
+                MessageBox.Show("Bust for the dealer! You win! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
+            }
+            else if (uPoints == cPoints)
             {
                 totalBet = 0 + insuranceBet;
                 MessageBox.Show("Tie!" + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
@@ -3093,16 +3103,6 @@ namespace Simplified21Sasha
             {
                 totalBet = bet * 1.5 + insuranceBet;
                 MessageBox.Show("Blackjack! You win! " + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
-            }
-            else if (uPoints > 21)
-            {
-                totalBet = 0 - bet + insuranceBet;
-                MessageBox.Show("Bust! The dealer wins! " + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
-            }
-            else if (cPoints > 21)
-            {
-                totalBet = bet * 1.5 + insuranceBet;
-                MessageBox.Show("Bust for the dealer! You win! " + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
             }
             else if (uPoints > cPoints)
             {
@@ -3381,7 +3381,17 @@ namespace Simplified21Sasha
             uPoints = uRandom + uRandom2 + uRandom5;
             cPoints = cRandom + cRandom2 + cRandom3 + cRandom4;
 
-            if (uPoints == cPoints)
+            if (uPoints > 21)
+            {
+                totalBet = 0 - bet + insuranceBet;
+                MessageBox.Show("Bust! The dealer wins! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
+            }
+            else if (cPoints > 21)
+            {
+                totalBet = bet * 1.5 + insuranceBet;
+                MessageBox.Show("Bust for the dealer! You win! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
+            }
+            else if (uPoints == cPoints)
             {
                 totalBet = 0 + insuranceBet;
                 MessageBox.Show("Tie!" + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
@@ -3395,16 +3405,6 @@ namespace Simplified21Sasha
             {
                 totalBet = bet * 1.5 + insuranceBet;
                 MessageBox.Show("Blackjack! You win! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
-            }
-            else if (uPoints > 21)
-            {
-                totalBet = 0 - bet + insuranceBet;
-                MessageBox.Show("Bust! The dealer wins! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
-            }
-            else if (cPoints > 21)
-            {
-                totalBet = bet * 1.5 + insuranceBet;
-                MessageBox.Show("Bust for the dealer! You win! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
             }
             else if (uPoints > cPoints)
             {
@@ -3684,12 +3684,22 @@ namespace Simplified21Sasha
             uPoints = uRandom + uRandom2 + uRandom5 + uRandom8;
             cPoints = cRandom + cRandom2 + cRandom3 + cRandom4;
 
+            if (uPoints > 21)
+            {
+                totalBet = 0 - bet + insuranceBet;
+                MessageBox.Show("Bust! The dealer wins! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
+            }
+            else if (cPoints > 21)
+            {
+                totalBet = bet * 1.5 + insuranceBet;
+                MessageBox.Show("Bust for the dealer! You win! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
+            }
             if (uPoints == cPoints)
             {
                 totalBet = 0 + insuranceBet;
                 MessageBox.Show("Tie !" + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
             }
-            if (cPoints == 21)
+            else if (cPoints == 21)
             {
                 totalBet = 0 - bet + insuranceBet;
                 MessageBox.Show("Blackjack for the dealer! The dealer wins! " + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
@@ -3698,16 +3708,6 @@ namespace Simplified21Sasha
             {
                 totalBet = bet * 1.5 + insuranceBet;
                 MessageBox.Show("Blackjack! You win! " + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
-            }
-            else if (uPoints > 21)
-            {
-                totalBet = 0 - bet + insuranceBet;
-                MessageBox.Show("Bust! The dealer wins! " + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
-            }
-            else if (cPoints > 21)
-            {
-                totalBet = bet * 1.5 + insuranceBet;
-                MessageBox.Show("Bust for the dealer! You win! " + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + " Your total: " + Convert.ToString(uPoints), "Results");
             }
             else if (uPoints > cPoints)
             {
@@ -3986,6 +3986,16 @@ namespace Simplified21Sasha
             uPoints = uRandom + uRandom2 +  uRandom5 + uRandom8;
             cPoints = cRandom + cRandom2 + cRandom3 + cRandom4;
 
+            if (uPoints > 21)
+            {
+                totalBet = 0 - bet + insuranceBet;
+                MessageBox.Show("Bust! The dealer wins! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints), "Results");
+            }
+            else if (cPoints > 21)
+            {
+                totalBet = bet * 1.5 + insuranceBet;
+                MessageBox.Show("Bust for the dealer! You win! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints), "Results");
+            }
             if (uPoints == cPoints)
             {
                 totalBet = 0 + insuranceBet;
@@ -4000,16 +4010,6 @@ namespace Simplified21Sasha
             {
                 totalBet = bet * 1.5 + insuranceBet;
                 MessageBox.Show("Blackjack! You win! " + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints), "Results");
-            }
-            else if (uPoints > 21)
-            {
-                totalBet = 0 - bet + insuranceBet;
-                MessageBox.Show("Bust! The dealer wins! " + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints), "Results");
-            }
-            else if (cPoints > 21)
-            {
-                totalBet = bet * 1.5 + insuranceBet;
-                MessageBox.Show("Bust for the dealer! You win! " + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints), "Results");
             }
             else if (uPoints > cPoints)
             {
@@ -4297,7 +4297,17 @@ namespace Simplified21Sasha
             uPoints = uRandom + uRandom2;
             cPoints = cRandom + cRandom2 + cRandom3 + cRandom4;
 
-            if (uPoints == cPoints)
+            if (uPoints > 21)
+            {
+                totalBet = 0 - bet + insuranceBet;
+                MessageBox.Show("Bust! The dealer wins! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints) + " Your total: " + Convert.ToString(uPoints), "Results");
+            }
+            else if (cPoints > 21)
+            {
+                totalBet = bet * 1.5 + insuranceBet;
+                MessageBox.Show("Bust for the dealer! " + "You win! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints), "Results");
+            }
+            else if (uPoints == cPoints)
             {
                 totalBet = 0 + insuranceBet;
                 MessageBox.Show("Tie! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints) + " Your total: " + Convert.ToString(uPoints), "Results");
@@ -4311,16 +4321,6 @@ namespace Simplified21Sasha
             {
                 totalBet = bet * 1.5 + insuranceBet;
                 MessageBox.Show("Blackjack! You win! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints) + " Your total: " + Convert.ToString(uPoints), "Results");
-            }
-            else if (uPoints > 21)
-            {
-                totalBet = 0 - bet + insuranceBet;
-                MessageBox.Show("Bust! The dealer wins! " + "Your payoff: $" + Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints) + " Your total: " + Convert.ToString(uPoints), "Results");
-            }
-            else if (cPoints > 21)
-            {
-                totalBet = bet * 1.5 + insuranceBet;
-                MessageBox.Show("Bust for the dealer! " + "You win! " + "Your payoff: $"+ Convert.ToString(totalBet) + " Your total: " + Convert.ToString(uPoints), "Results");
             }
             else if (uPoints > cPoints)
             {
