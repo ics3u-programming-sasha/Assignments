@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Created by: Sasha Malko
+ * Created on: 25-Oct-2019
+ * Created for: ICS3U Programming
+ * Assignment #5b - Simplified 21
+ * This program allows the user to play a simplified version of the game 21.
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +19,15 @@ namespace Simplified21Sasha
 {
     public partial class Simplified21Form2 : Form
     {
-        // play music
+        // declare variable
         WMPLib.WindowsMediaPlayer player = new WMPLib.WindowsMediaPlayer();
         
 
         public Simplified21Form2()
         {
             InitializeComponent();
+
+            // play music
             player.URL = "Music.mp3";
             player.controls.play();
 

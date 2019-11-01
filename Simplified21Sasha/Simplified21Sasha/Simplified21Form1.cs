@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Created by: Sasha Malko
+ * Created on: 25-Oct-2019
+ * Created for: ICS3U Programming
+ * Assignment #5b - Simplified 21
+ * This program allows the user to play a simplified version of the game 21.
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,7 +43,6 @@ namespace Simplified21Sasha
         int cRandom4;
         int cRandomCard4;
         double bet;
-        Random rnd = new Random();
         int uPoint;
         int uPoint2;
         int uPoint3;
@@ -48,45 +54,13 @@ namespace Simplified21Sasha
         int uTotal;
         int cTotal;
         double payoff;
-
+        Random rnd = new Random();
         WMPLib.WindowsMediaPlayer player;
-
-        public Simplified21Form1()
-        {
-            InitializeComponent();
-
-            // hide everything that is not yet needed on the starting screen
-            this.picCard.Hide();
-            this.picCard2.Hide();
-            this.picCard3.Hide();
-            this.picCard4.Hide();
-            this.picCCard.Hide();
-            this.picCCard2.Hide();
-            this.picCCard3.Hide();
-            this.picCCard4.Hide();
-            this.lblDealer.Hide();
-            this.lblUser.Hide();
-            this.lblHitOrStay.Hide();
-            this.btnDeal.Enabled = false;
-            this.btnDeal.Visible = false;
-            this.btnHit.Visible = false;
-            this.btnHit.Enabled = false;
-            this.btnStay.Visible = false;
-            this.btnStay.Enabled = false;
-            this.btnHit2.Visible = false;
-            this.btnStay2.Visible = false;
-            this.btnHit2.Enabled = false;
-            this.btnHit2.Enabled = false;
-            this.lblUTotal.Hide();
-            this.lblCTotal.Hide();
-        }
 
         public Simplified21Form1(ref WMPLib.WindowsMediaPlayer soundPlayer)
         {
             InitializeComponent();
 
-            player = soundPlayer;
-
             // hide everything that is not yet needed on the starting screen
             this.picCard.Hide();
             this.picCard2.Hide();
@@ -111,6 +85,9 @@ namespace Simplified21Sasha
             this.btnHit2.Enabled = false;
             this.lblUTotal.Hide();
             this.lblCTotal.Hide();
+
+            // set the player as the soundPlayer
+            player = soundPlayer;
         }
 
 
@@ -130,7 +107,7 @@ namespace Simplified21Sasha
 
         private void BtnDeal_Click(object sender, EventArgs e)
         {
-            // display the cards on the cards on the screen and the hit or stay options while disabling the deal button
+            // display the cards and the hit or stay options while disabling the deal button
             this.btnDeal.Enabled = false;
             this.btnDeal.Visible = false;
             this.btnHit.Visible = true;
@@ -307,7 +284,7 @@ namespace Simplified21Sasha
             lblUTotal.Text = "Your total: " + Convert.ToString(uTotal);
             this.lblUTotal.Show();
 
-            // display the card that corresponds to the random value for the first dealer's card and the points
+            // display the card that corresponds to the random value for the dealer's first card and the points
             if (cRandom == 1)
             {
                 this.picCCard.Image = Properties.Resources.Ace;
@@ -413,7 +390,7 @@ namespace Simplified21Sasha
             uRandom3 = rnd.Next(MIN_NUM, MAX_NUM + 1);
             uRandomCard3 = rnd.Next(CMIN_NUM, CMAX_NUM + 1);
 
-            //display the third user card
+            // display the third user card
             this.picCard3.Show();
 
             // display the card that corresponds to the random value for the third user card and the points
@@ -489,10 +466,10 @@ namespace Simplified21Sasha
             lblUTotal.Text = "Your total: " + Convert.ToString(uTotal);
             this.lblUTotal.Show();
 
-            // check if the user busted, and if they did, display so, and end the game
+            // check if the user busted, and if they did, display so and end the game
             if (uTotal > 21)
             {
-                payoff = 0 - 2;
+                payoff = 0 - bet;
                 MessageBox.Show("Bust! You lose!" + " Your total:" + uTotal + " Dealer's total:" + cTotal + " Your payoff:$" + payoff, "Results");
                 this.btnHit.Visible = false;
                 this.btnStay.Visible = false;
@@ -528,7 +505,7 @@ namespace Simplified21Sasha
             this.picCCard3.Show();
             this.picCCard4.Show();
 
-            // display the card that corresponds to the random value for the second dealer's card and the points
+            // display the card that corresponds to the random value for the dealer's second card and the points
             if (cRandom2 == 1)
             {
                 this.picCCard2.Image = Properties.Resources.Ace;
@@ -608,7 +585,7 @@ namespace Simplified21Sasha
                 }
             }
 
-            // display the card that corresponds to the random value for the third dealer's card and the points
+            // display the card that corresponds to the random value for the dealer's third card and the points
             if (cRandom3 == 1)
             {
                 this.picCCard3.Image = Properties.Resources.Ace;
@@ -688,7 +665,7 @@ namespace Simplified21Sasha
                 }
             }
 
-            // display the card that corresponds to the random value for the third dealer's card and the points
+            // display the card that corresponds to the random value for the dealer's fourth card and the points
             if (cRandom4 == 1)
             {
                 this.picCCard4.Image = Properties.Resources.Ace;
@@ -773,7 +750,7 @@ namespace Simplified21Sasha
             lblCTotal.Text = "Dealer's total: " + Convert.ToString(cTotal);
             this.lblCTotal.Show();
 
-            // check for the results of the game and display the results
+            // check the results of the game and display the results
             if (cTotal > 21)
             {
                 payoff = bet * 1.5;
@@ -828,7 +805,7 @@ namespace Simplified21Sasha
             this.picCCard3.Show();
             this.picCCard4.Show();
 
-            // display the card that corresponds to the random value for the second dealer's card and the points
+            // display the card that corresponds to the random value for the dealer's second card and the points
             if (cRandom2 == 1)
             {
                 this.picCCard2.Image = Properties.Resources.Ace;
@@ -908,7 +885,7 @@ namespace Simplified21Sasha
                 }
             }
 
-            // display the card that corresponds to the random value for the third dealer's card and the points
+            // display the card that corresponds to the random value for the dealer's third card and the points
             if (cRandom3 == 1)
             {
                 this.picCCard3.Image = Properties.Resources.Ace;
@@ -988,7 +965,7 @@ namespace Simplified21Sasha
                 }
             }
 
-            // display the card that corresponds to the random value for the third dealer's card and the points
+            // display the card that corresponds to the random value for the dealer's fourth card and the points
             if (cRandom4 == 1)
             {
                 this.picCCard4.Image = Properties.Resources.Ace;
@@ -1077,10 +1054,10 @@ namespace Simplified21Sasha
             uRandom4 = rnd.Next(MIN_NUM, MAX_NUM + 1);
             uRandomCard4 = rnd.Next(CMIN_NUM, CMAX_NUM + 1);
 
-            //display the third user card
+            //display the fourth user card
             this.picCard4.Show();
 
-            // display the card that corresponds to the random value for the third user card and the points
+            // display the card that corresponds to the random value for the fourth user card and the points
             if (uRandom4 == 1)
             {
                 this.picCard4.Image = Properties.Resources.Ace;
@@ -1153,7 +1130,7 @@ namespace Simplified21Sasha
             lblUTotal.Text = "Your total: " + Convert.ToString(uTotal);
             this.lblUTotal.Show();
 
-            // check for the results of the game and display the results
+            // check the results of the game and display the results
             if (uTotal > 21)
             {
                 payoff = 0 - 2;
@@ -1193,7 +1170,7 @@ namespace Simplified21Sasha
 
         private void BtnStay2_Click(object sender, EventArgs e)
         {
-            // disable the hit and stay buttons
+            // disable the hit or stay objects
             this.btnHit2.Visible = false;
             this.btnStay2.Visible = false;
             this.btnHit2.Enabled = false;
@@ -1213,7 +1190,7 @@ namespace Simplified21Sasha
             this.picCCard3.Show();
             this.picCCard4.Show();
 
-            // display the card that corresponds to the random value for the second dealer's card and the points
+            // display the card that corresponds to the random value for the dealer's second card and the points
             if (cRandom2 == 1)
             {
                 this.picCCard2.Image = Properties.Resources.Ace;
@@ -1293,7 +1270,7 @@ namespace Simplified21Sasha
                 }
             }
 
-            // display the card that corresponds to the random value for the third dealer's card and the points
+            // display the card that corresponds to the random value for the dealer's third card and the points
             if (cRandom3 == 1)
             {
                 this.picCCard3.Image = Properties.Resources.Ace;
@@ -1373,7 +1350,7 @@ namespace Simplified21Sasha
                 }
             }
 
-            // display the card that corresponds to the random value for the third dealer's card and the points
+            // display the card that corresponds to the random value for the dealer's fourth card and the points
             if (cRandom4 == 1)
             {
                 this.picCCard4.Image = Properties.Resources.Ace;
@@ -1458,7 +1435,7 @@ namespace Simplified21Sasha
             lblCTotal.Text = "Dealer's total: " + Convert.ToString(cTotal);
             this.lblCTotal.Show();
 
-            // check for the results of the game and display the results
+            // check the results of the game and display the results
             if (cTotal > 21)
             {
                 payoff = bet * 1.5;
@@ -1499,18 +1476,14 @@ namespace Simplified21Sasha
 
         private void MniNewGame_Click(object sender, EventArgs e)
         {
-
             // stop the music
             player.controls.stop();
+
             // start a new game
             this.Close();
-
             Simplified21Form2 form2 = new Simplified21Form2();
             this.Hide();
             form2.ShowDialog();
-
-            
         }
     }
 }
-

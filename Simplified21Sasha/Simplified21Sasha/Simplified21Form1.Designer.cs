@@ -301,7 +301,7 @@
             this.lblUTotal.BackColor = System.Drawing.Color.DarkGreen;
             this.lblUTotal.Font = new System.Drawing.Font("Segoe Print", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUTotal.ForeColor = System.Drawing.Color.Khaki;
-            this.lblUTotal.Location = new System.Drawing.Point(554, 47);
+            this.lblUTotal.Location = new System.Drawing.Point(576, 243);
             this.lblUTotal.Name = "lblUTotal";
             this.lblUTotal.Size = new System.Drawing.Size(98, 28);
             this.lblUTotal.TabIndex = 51;
@@ -313,7 +313,7 @@
             this.lblCTotal.BackColor = System.Drawing.Color.DarkGreen;
             this.lblCTotal.Font = new System.Drawing.Font("Segoe Print", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCTotal.ForeColor = System.Drawing.Color.Khaki;
-            this.lblCTotal.Location = new System.Drawing.Point(552, 89);
+            this.lblCTotal.Location = new System.Drawing.Point(576, 33);
             this.lblCTotal.Name = "lblCTotal";
             this.lblCTotal.Size = new System.Drawing.Size(122, 28);
             this.lblCTotal.TabIndex = 52;
