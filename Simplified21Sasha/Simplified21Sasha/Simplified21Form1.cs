@@ -49,6 +49,8 @@ namespace Simplified21Sasha
         int cTotal;
         double payoff;
 
+        WMPLib.WindowsMediaPlayer player;
+
         public Simplified21Form1()
         {
             InitializeComponent();
@@ -78,6 +80,39 @@ namespace Simplified21Sasha
             this.lblUTotal.Hide();
             this.lblCTotal.Hide();
         }
+
+        public Simplified21Form1(ref WMPLib.WindowsMediaPlayer soundPlayer)
+        {
+            InitializeComponent();
+
+            player = soundPlayer;
+
+            // hide everything that is not yet needed on the starting screen
+            this.picCard.Hide();
+            this.picCard2.Hide();
+            this.picCard3.Hide();
+            this.picCard4.Hide();
+            this.picCCard.Hide();
+            this.picCCard2.Hide();
+            this.picCCard3.Hide();
+            this.picCCard4.Hide();
+            this.lblDealer.Hide();
+            this.lblUser.Hide();
+            this.lblHitOrStay.Hide();
+            this.btnDeal.Enabled = false;
+            this.btnDeal.Visible = false;
+            this.btnHit.Visible = false;
+            this.btnHit.Enabled = false;
+            this.btnStay.Visible = false;
+            this.btnStay.Enabled = false;
+            this.btnHit2.Visible = false;
+            this.btnStay2.Visible = false;
+            this.btnHit2.Enabled = false;
+            this.btnHit2.Enabled = false;
+            this.lblUTotal.Hide();
+            this.lblCTotal.Hide();
+        }
+
 
         private void BtnBet_Click(object sender, EventArgs e)
         {
@@ -1464,11 +1499,17 @@ namespace Simplified21Sasha
 
         private void MniNewGame_Click(object sender, EventArgs e)
         {
+
+            // stop the music
+            player.controls.stop();
             // start a new game
             this.Close();
+
             Simplified21Form2 form2 = new Simplified21Form2();
             this.Hide();
             form2.ShowDialog();
+
+            
         }
     }
 }
