@@ -15,13 +15,19 @@ namespace Simplified21Sasha
         public Simplified21Form2()
         {
             InitializeComponent();
+
+            // play music
+            WMPLib.WindowsMediaPlayer player = new WMPLib.WindowsMediaPlayer();
+            player.URL = "Music.mp3";
+            player.controls.play();
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Simplified21Form1 f1 = new Simplified21Form1();
+            // display the second form
+            Simplified21Form1 form1 = new Simplified21Form1();
             this.Hide();
-            f1.ShowDialog();
+            form1.ShowDialog();
         }
     }
 }
