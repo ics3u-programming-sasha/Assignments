@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{78FFD2D3-FCAC-4449-AC51-31F94C0946FF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Simplified21Sasha</RootNamespace>
+    <AssemblyName>Simplified21Sasha</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Better21Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Better21Form2.Designer.cs">
+      <DependentUpon>Better21Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Better21Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Better21Form1.Designer.cs">
+      <DependentUpon>Better21Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Better21.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Better21Form2.resx">
+      <DependentUpon>Better21Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Better21Form1.resx">
+      <DependentUpon>Better21Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ace.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Two.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ace1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Five.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Four.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\King.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Queen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seven.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Six.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ten.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Three.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Two1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AceC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AceD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AceH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AceS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EightC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EightD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EightH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EightS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FiveC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FiveD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FiveH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FiveS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FourC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FourD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FourH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FourS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NineC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NineD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NineH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NineS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SevenC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SevenD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SevenH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SevenS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SixC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SixD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SixH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SixS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TenC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TenD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TenH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TenS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThreeC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThreeD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThreeH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThreeS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table2.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

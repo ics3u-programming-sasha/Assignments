@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.28922.388
+VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Better21Sasha", "Better21Sasha\Better21Sasha.csproj", "{1075BB7B-2886-4604-AAD5-1479BBA0899A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Better21Sasha", "Simplified21Sasha\Better21Sasha.csproj", "{78FFD2D3-FCAC-4449-AC51-31F94C0946FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1075BB7B-2886-4604-AAD5-1479BBA0899A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1075BB7B-2886-4604-AAD5-1479BBA0899A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1075BB7B-2886-4604-AAD5-1479BBA0899A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1075BB7B-2886-4604-AAD5-1479BBA0899A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78FFD2D3-FCAC-4449-AC51-31F94C0946FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78FFD2D3-FCAC-4449-AC51-31F94C0946FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78FFD2D3-FCAC-4449-AC51-31F94C0946FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78FFD2D3-FCAC-4449-AC51-31F94C0946FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {52A91EE6-ECD5-4C8A-B3BE-3D9615AF537B}
+		SolutionGuid = {2F1407AF-7D03-4983-8979-1737FDA0D164}
 	EndGlobalSection
 EndGlobal
