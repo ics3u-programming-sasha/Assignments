@@ -184,7 +184,7 @@ namespace Simplified21Sasha
             int cardNumber;
             Random randNum = new Random();
 
-            cardNumber = randNum.Next(0, 51 + 1);
+            cardNumber = randNum.Next(0 , listCardImages.Count() - 1);
 
 
             if (cardNumber == 0)
@@ -674,15 +674,16 @@ namespace Simplified21Sasha
                 MessageBox.Show("It is a tie!" + " Your total:" + uTotal + " Dealer's total:" + cTotal + " Your payoff:$" + payoff, "Results");
             }
 
-            if (listCardImages.Count < 8)
+            if (listCardImages.Count() < 8)
             {
-                MessageBox.Show("Starting a new round.", "Results");
+                MessageBox.Show("Starting a new game.", "Better 21");
                 ClearGame();
+                this.listCardImages.Clear();
                 NewGame();
             }
             else
             {
-                MessageBox.Show("Starting a new game.", "Results");
+                MessageBox.Show("Starting a new round.", "Better 21");
                 ClearGame();
                 CalculateTotal();
             }
