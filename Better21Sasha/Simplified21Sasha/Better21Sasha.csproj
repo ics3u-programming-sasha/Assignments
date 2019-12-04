@@ -59,12 +59,21 @@
       <DependentUpon>Better21Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Better21.cs" />
+    <Compile Include="Better21Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Better21Form3.Designer.cs">
+      <DependentUpon>Better21Form3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Better21Form2.resx">
       <DependentUpon>Better21Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Better21Form1.resx">
       <DependentUpon>Better21Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Better21Form3.resx">
+      <DependentUpon>Better21Form3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

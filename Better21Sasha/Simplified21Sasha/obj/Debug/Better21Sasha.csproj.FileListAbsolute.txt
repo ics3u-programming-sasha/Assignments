@@ -13,3 +13,4 @@ C:\Users\S\Documents\ICS3U\Assignments\Better21Sasha\Simplified21Sasha\obj\Debug
 C:\Users\S\Documents\ICS3U\Assignments\Better21Sasha\Simplified21Sasha\obj\Debug\Better21Sasha.csproj.GenerateResource.cache
 C:\Users\S\Documents\ICS3U\Assignments\Better21Sasha\Simplified21Sasha\obj\Debug\Simplified21Sasha.exe
 C:\Users\S\Documents\ICS3U\Assignments\Better21Sasha\Simplified21Sasha\obj\Debug\Simplified21Sasha.pdb
+C:\Users\S\Documents\ICS3U\Assignments\Better21Sasha\Simplified21Sasha\obj\Debug\Simplified21Sasha.Better21Form3.resources

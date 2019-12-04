@@ -32,6 +32,7 @@
             this.lblPlay = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.picTable = new System.Windows.Forms.PictureBox();
+            this.btnInstructions = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,16 +83,30 @@
             this.picTable.TabIndex = 1;
             this.picTable.TabStop = false;
             // 
-            // Simplified21Form2
+            // btnInstructions
+            // 
+            this.btnInstructions.BackColor = System.Drawing.Color.White;
+            this.btnInstructions.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInstructions.ForeColor = System.Drawing.Color.Black;
+            this.btnInstructions.Location = new System.Drawing.Point(29, 366);
+            this.btnInstructions.Name = "btnInstructions";
+            this.btnInstructions.Size = new System.Drawing.Size(142, 58);
+            this.btnInstructions.TabIndex = 5;
+            this.btnInstructions.Text = "Instructions";
+            this.btnInstructions.UseVisualStyleBackColor = false;
+            this.btnInstructions.Click += new System.EventHandler(this.btnInstructions_Click);
+            // 
+            // Better21Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnInstructions);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblPlay);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.picTable);
-            this.Name = "Simplified21Form2";
+            this.Name = "Better21Form2";
             this.Text = "Better 21 by Sasha";
             ((System.ComponentModel.ISupportInitialize)(this.picTable)).EndInit();
             this.ResumeLayout(false);
@@ -105,5 +120,6 @@
         private System.Windows.Forms.PictureBox picTable;
         private System.Windows.Forms.Label lblPlay;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnInstructions;
     }
 }

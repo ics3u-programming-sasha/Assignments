@@ -40,5 +40,14 @@ namespace Simplified21Sasha
             this.Hide();
             form1.ShowDialog();
         }
+
+        private void btnInstructions_Click(object sender, EventArgs e)
+        {
+            player.controls.stop();
+            // display the second form
+            Better21Form3 form3 = new Better21Form3();
+            this.Hide();
+            form3.ShowDialog();
+        }
     }
 }

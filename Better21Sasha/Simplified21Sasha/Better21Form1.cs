@@ -26,31 +26,7 @@ namespace Simplified21Sasha
         const int CMAX_NUM = 4;
 
         // declare variables
-        int uRandom;
-        int uRandomCard;
-        int uRandom2;
-        int uRandomCard2;
-        int uRandom3;
-        int uRandomCard3;
-        int uRandom4;
-        int uRandomCard4;
-        int cRandom;
-        int cRandomCard;
-        int cRandom2;
-        int cRandomCard2;
-        int cRandom3;
-        int cRandomCard3;
-        int cRandom4;
-        int cRandomCard4;
         double bet;
-        int uPoint;
-        int uPoint2;
-        int uPoint3;
-        int uPoint4;
-        int cPoint;
-        int cPoint2;
-        int cPoint3;
-        int cPoint4;
         int uTotal1;
         int uTotal2;
         int uTotal3;
@@ -62,9 +38,11 @@ namespace Simplified21Sasha
         int uTotal;
         int uTotal4;
         int point = 0;
+        int aceValue = 0;
         double payoff;
         Random rnd = new Random();
         WMPLib.WindowsMediaPlayer player;
+        WMPLib.WindowsMediaPlayer effectPlayer = new WMPLib.WindowsMediaPlayer();
 
         public Better21Form1(ref WMPLib.WindowsMediaPlayer soundPlayer)
         {
@@ -92,6 +70,13 @@ namespace Simplified21Sasha
             this.btnHit2.Enabled = false;
             this.lblUTotal.Hide();
             this.lblCTotal.Hide();
+            this.lblFlip.Hide();
+
+            this.lblAce.Hide();
+            this.btnOne.Visible = false;
+            this.btnOne.Enabled = false;
+            this.btnEleven.Visible = false;
+            this.btnEleven.Visible = false;
 
             // set the player as the soundPlayer
             player = soundPlayer;
@@ -180,36 +165,37 @@ namespace Simplified21Sasha
             picCard.Visible = true;
             picCard2.Visible = true;
             picCCard.Visible = true;
+            picCCard2.Visible = true;
 
             int cardNumber;
             Random randNum = new Random();
 
-            cardNumber = randNum.Next(0 , listCardImages.Count() - 1);
+            cardNumber = randNum.Next(0, listCardImages.Count() - 1);
 
 
             if (cardNumber == 0)
             {
                 aPictureBox.Image = Properties.Resources.AceC;
                 listCardImages.RemoveAt(0);
-                point = 1;
+                point = 0;
             }
             else if (cardNumber == 1)
             {
                 aPictureBox.Image = Properties.Resources.AceH;
                 listCardImages.RemoveAt(1);
-                point = 1;
+                point = 0;
             }
             else if (cardNumber == 2)
             {
                 aPictureBox.Image = Properties.Resources.AceD;
                 listCardImages.RemoveAt(2);
-                point = 1;
+                point = 0;
             }
             else if (cardNumber == 3)
             {
                 aPictureBox.Image = Properties.Resources.AceS;
                 listCardImages.RemoveAt(3);
-                point = 1;
+                point = 0;
             }
             else if (cardNumber == 4)
             {
@@ -503,6 +489,25 @@ namespace Simplified21Sasha
             return point;
         }
 
+        private void Ace()
+        {
+            this.lblAce.Show();
+            this.btnOne.Visible = true;
+            this.btnOne.Enabled = true;
+            this.btnEleven.Visible = true;
+            this.btnEleven.Visible = true;
+
+            this.lblHitOrStay.Hide();
+            this.btnHit.Visible = false;
+            this.btnHit.Enabled = false;
+            this.btnStay.Visible = false;
+            this.btnStay.Enabled = false;
+            this.btnHit2.Visible = false;
+            this.btnHit2.Enabled = false;
+            this.btnStay2.Visible = false;
+            this.btnStay2.Enabled = false;
+        }
+
         private void CalculateTotal()
         {
             HitOrStay();
@@ -523,12 +528,32 @@ namespace Simplified21Sasha
             {
                 cTotal1 = DealCard(ref this.picCCard, point);
             }
+            if (picCCard2.Visible == true)
+            {
+                picCCard2.Image = Properties.Resources.Back;
+            }
 
-            uTotal = uTotal1 + uTotal2;
-            this.lblUTotal.Text = "Your total: " + uTotal;
+            if (uTotal1 == 0)
+            {
+                Ace();
+                uTotal = uTotal1 + uTotal2 + aceValue;
+                this.lblUTotal.Text = "Your total: ";
+            }
+            else if (uTotal2 == 0)
+            {
+                Ace();
+                uTotal = uTotal1 + uTotal2 + aceValue;
+                this.lblUTotal.Text = "Your total: " + uTotal;
+            }
+            else
+            {
+                uTotal = uTotal1 + uTotal2 + aceValue;
+                this.lblUTotal.Text = "Your total: " + uTotal;
 
-            cTotal = cTotal1;
-            this.lblCTotal.Text = "Dealer's total: " + cTotal;
+                cTotal = cTotal1;
+                this.lblCTotal.Text = "Dealer's total: " + cTotal;
+            }
+
         }
 
         private void HitOrStay()
@@ -576,35 +601,42 @@ namespace Simplified21Sasha
 
         private void MniNewGame_Click(object sender, EventArgs e)
         {
-            // stop the music
-            player.controls.stop();
 
             // start a new game
             this.Close();
-            Better21Form2 form2 = new Better21Form2();
+            Better21Form1 form1 = new Better21Form1(ref player);
             this.Hide();
-            form2.ShowDialog();
+            form1.ShowDialog();
         }
 
         private void btnHit_Click(object sender, EventArgs e)
         {
+            HitOrStay2();
+
             picCard3.Visible = true;
             uTotal3 = DealCard(ref this.picCard3, point);
-            uTotal = uTotal1 + uTotal2 + uTotal3;
-            this.lblUTotal.Text = "Your total: " + uTotal;
 
-            HitOrStay2();
+            if (uTotal3 == 0)
+            {
+                Ace();
+                uTotal = uTotal1 + uTotal2 + uTotal3 + aceValue;
+                this.lblUTotal.Text = "Your total: " + uTotal;
+            }
+            else
+            {
+                uTotal = uTotal1 + uTotal2 + uTotal3 + aceValue;
+                this.lblUTotal.Text = "Your total: " + uTotal;
+            }
+
 
         }
 
         private void DealerCards()
         {
-            picCCard2.Visible = true;
-            cTotal2 = DealCard(ref this.picCCard2, point);
             picCCard3.Visible = true;
             cTotal3 = DealCard(ref this.picCCard3, point);
             picCCard4.Visible = true;
-            cTotal4 = DealCard(ref this.picCCard2, point);
+            cTotal4 = DealCard(ref this.picCCard4, point);
 
 
             cTotal = cTotal1 + cTotal2 + cTotal3 + cTotal4;
@@ -615,15 +647,38 @@ namespace Simplified21Sasha
 
         private void btnStay_Click(object sender, EventArgs e)
         {
-            DealerCards();
+            this.lblHitOrStay.Hide();
+            this.btnHit.Visible = false;
+            this.btnHit.Enabled = false;
+            this.btnStay.Visible = false;
+            this.btnStay.Enabled = false;
+            this.lblFlip.Show(); 
         }
 
         private void btnHit2_Click(object sender, EventArgs e)
         {
             picCard4.Visible = true;
             uTotal4 = DealCard(ref this.picCard4, point);
-            uTotal = uTotal1 + uTotal2 + uTotal3 + uTotal4;
-            this.lblUTotal.Text = "Your total: " + uTotal;
+
+            if (uTotal4 == 0)
+            {
+                Ace();
+                uTotal = uTotal1 + uTotal2 + uTotal3 + uTotal4 + aceValue;
+                this.lblUTotal.Text = "Your total: " + uTotal;
+
+            }
+            else 
+            {
+                uTotal = uTotal1 + uTotal2 + uTotal3 + uTotal4 + aceValue;
+                this.lblUTotal.Text = "Your total: " + uTotal;
+
+                this.lblHitOrStay.Hide();
+                this.btnHit.Visible = false;
+                this.btnHit.Enabled = false;
+                this.btnStay.Visible = false;
+                this.btnStay.Enabled = false;
+                this.lblFlip.Show();
+            }
 
             this.lblHitOrStay.Hide();
             this.btnHit2.Visible = false;
@@ -631,12 +686,14 @@ namespace Simplified21Sasha
             this.btnStay2.Visible = false;
             this.btnStay2.Enabled = false;
 
-            DealerCards();
 
         }
 
         private void DetermineResults()
         {
+            effectPlayer.URL = "TaDa.mp3";
+            effectPlayer.controls.play();
+
             // check the results of the game and display the results
             if (uTotal > 21)
             {
@@ -713,10 +770,93 @@ namespace Simplified21Sasha
             this.btnHit2.Enabled = false;
             this.lblUTotal.Hide();
             this.lblCTotal.Hide();
+            this.lblAce.Hide();
+            this.btnOne.Visible = false;
+            this.btnOne.Enabled = false;
+            this.btnEleven.Visible = false;
+            this.btnEleven.Visible = false;
         }
 
         private void btnStay2_Click(object sender, EventArgs e)
         {
+            this.lblHitOrStay.Hide();
+            this.btnHit2.Visible = false;
+            this.btnHit2.Enabled = false;
+            this.btnStay2.Visible = false;
+            this.btnStay2.Enabled = false;
+            this.lblFlip.Show();
+        }
+
+        private void btnOne_Click(object sender, EventArgs e)
+        {
+            this.lblAce.Hide();
+            this.btnOne.Visible = false;
+            this.btnOne.Enabled = false;
+            this.btnEleven.Visible = false;
+            this.btnEleven.Visible = false;
+
+            aceValue = 1;
+
+            if (uTotal1 == 0)
+            {
+                HitOrStay();
+            }
+            if (uTotal2 == 0)
+            {
+                HitOrStay();
+            }
+            else if (uTotal3 == 0 )
+            {
+                HitOrStay2();
+            }
+            else if (uTotal4 == 0)
+            {
+                this.lblHitOrStay.Hide();
+                this.btnHit2.Visible = false;
+                this.btnHit2.Enabled = false;
+                this.btnStay2.Visible = false;
+                this.btnStay2.Enabled = false;
+                this.lblFlip.Show();
+            }
+        }
+
+        private void btnEleven_Click(object sender, EventArgs e)
+        {
+            this.lblAce.Hide();
+            this.btnOne.Visible = false;
+            this.btnOne.Enabled = false;
+            this.btnEleven.Visible = false;
+            this.btnEleven.Visible = false;
+
+            aceValue = 11;
+
+            if (uTotal1 == 0)
+            {
+                HitOrStay();
+            }
+            else if (uTotal2 == 0)
+            {
+                HitOrStay();
+            }
+            else if (uTotal3 == 0)
+            {
+                HitOrStay2();
+            }
+            else if (uTotal4 == 0)
+            {
+                this.lblHitOrStay.Hide();
+                this.btnHit2.Visible = false;
+                this.btnHit2.Enabled = false;
+                this.btnStay2.Visible = false;
+                this.btnStay2.Enabled = false;
+                this.lblFlip.Show();
+            }
+        }
+
+        private void picCCard2_Click(object sender, EventArgs e)
+        {
+            cTotal4 = DealCard(ref this.picCCard2, point);
+            this.lblFlip.Hide();
             DealerCards();
         }
     }

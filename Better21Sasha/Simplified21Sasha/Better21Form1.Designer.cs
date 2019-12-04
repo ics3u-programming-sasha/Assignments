@@ -52,6 +52,10 @@
             this.picCard2 = new System.Windows.Forms.PictureBox();
             this.picCard = new System.Windows.Forms.PictureBox();
             this.picTable = new System.Windows.Forms.PictureBox();
+            this.lblAce = new System.Windows.Forms.Label();
+            this.btnOne = new System.Windows.Forms.Button();
+            this.btnEleven = new System.Windows.Forms.Button();
+            this.lblFlip = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudBet)).BeginInit();
             this.mnuOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCCard4)).BeginInit();
@@ -288,6 +292,7 @@
             this.picCCard2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCCard2.TabIndex = 8;
             this.picCCard2.TabStop = false;
+            this.picCCard2.Click += new System.EventHandler(this.picCCard2_Click);
             // 
             // picCCard
             // 
@@ -329,11 +334,61 @@
             this.picTable.TabIndex = 0;
             this.picTable.TabStop = false;
             // 
+            // lblAce
+            // 
+            this.lblAce.AutoSize = true;
+            this.lblAce.BackColor = System.Drawing.Color.Brown;
+            this.lblAce.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAce.ForeColor = System.Drawing.Color.White;
+            this.lblAce.Location = new System.Drawing.Point(248, 153);
+            this.lblAce.Name = "lblAce";
+            this.lblAce.Size = new System.Drawing.Size(539, 29);
+            this.lblAce.TabIndex = 55;
+            this.lblAce.Text = "Would you like to count the ace as 1 or 11?";
+            // 
+            // btnOne
+            // 
+            this.btnOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOne.Location = new System.Drawing.Point(394, 202);
+            this.btnOne.Name = "btnOne";
+            this.btnOne.Size = new System.Drawing.Size(98, 42);
+            this.btnOne.TabIndex = 56;
+            this.btnOne.Text = "One";
+            this.btnOne.UseVisualStyleBackColor = true;
+            this.btnOne.Click += new System.EventHandler(this.btnOne_Click);
+            // 
+            // btnEleven
+            // 
+            this.btnEleven.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEleven.Location = new System.Drawing.Point(545, 202);
+            this.btnEleven.Name = "btnEleven";
+            this.btnEleven.Size = new System.Drawing.Size(98, 42);
+            this.btnEleven.TabIndex = 57;
+            this.btnEleven.Text = "Eleven";
+            this.btnEleven.UseVisualStyleBackColor = true;
+            this.btnEleven.Click += new System.EventHandler(this.btnEleven_Click);
+            // 
+            // lblFlip
+            // 
+            this.lblFlip.AutoSize = true;
+            this.lblFlip.BackColor = System.Drawing.Color.Brown;
+            this.lblFlip.Font = new System.Drawing.Font("Mongolian Baiti", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFlip.ForeColor = System.Drawing.Color.White;
+            this.lblFlip.Location = new System.Drawing.Point(272, 127);
+            this.lblFlip.Name = "lblFlip";
+            this.lblFlip.Size = new System.Drawing.Size(296, 25);
+            this.lblFlip.TabIndex = 58;
+            this.lblFlip.Text = "Flip over the dealer\'s card!";
+            // 
             // Better21Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 450);
+            this.Controls.Add(this.lblFlip);
+            this.Controls.Add(this.btnEleven);
+            this.Controls.Add(this.btnOne);
+            this.Controls.Add(this.lblAce);
             this.Controls.Add(this.btnStay2);
             this.Controls.Add(this.btnHit2);
             this.Controls.Add(this.lblCTotal);
@@ -402,6 +457,10 @@
         private System.Windows.Forms.Label lblCTotal;
         private System.Windows.Forms.Button btnHit2;
         private System.Windows.Forms.Button btnStay2;
+        private System.Windows.Forms.Label lblAce;
+        private System.Windows.Forms.Button btnOne;
+        private System.Windows.Forms.Button btnEleven;
+        private System.Windows.Forms.Label lblFlip;
     }
 }
 
