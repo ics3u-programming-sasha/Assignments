@@ -1,9 +1,9 @@
 ﻿/*
  * Created by: Sasha Malko
- * Created on: 25-Oct-2019
+ * Created on: 20-Nov-2019
  * Created for: ICS3U Programming
- * Assignment #5b - Simplified 21
- * This program allows the user to play a simplified version of the game 21.
+ * Assignment #6b - Better 21
+ * This program allows the user to play a better version of the game 21.
 */
 using System;
 using System.Collections.Generic;
@@ -43,8 +43,10 @@ namespace Simplified21Sasha
 
         private void btnInstructions_Click(object sender, EventArgs e)
         {
+            // stop the music
             player.controls.stop();
-            // display the second form
+
+            // display the video form
             Better21Form3 form3 = new Better21Form3();
             this.Hide();
             form3.ShowDialog();

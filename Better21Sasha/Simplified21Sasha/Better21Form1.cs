@@ -1,9 +1,9 @@
 ﻿/*
  * Created by: Sasha Malko
- * Created on: 25-Oct-2019
+ * Created on: 20-Nov-2019
  * Created for: ICS3U Programming
- * Assignment #5b - Simplified 21
- * This program allows the user to play a simplified version of the game 21.
+ * Assignment #6b - Better 21
+ * This program allows the user to play a better version of the game 21.
 */
 using System;
 using System.Collections.Generic;
@@ -19,11 +19,6 @@ namespace Simplified21Sasha
 {
     public partial class Better21Form1 : Form
     {
-        // declare constants
-        const int MIN_NUM = 1;
-        const int MAX_NUM = 10;
-        const int CMIN_NUM = 1;
-        const int CMAX_NUM = 4;
 
         // declare variables
         double bet;
@@ -39,10 +34,13 @@ namespace Simplified21Sasha
         int uTotal4;
         int point = 0;
         int aceValue = 0;
+        int cValue = 1;
+        int cardNumber;
+        int length = 52;
         double payoff;
-        Random rnd = new Random();
         WMPLib.WindowsMediaPlayer player;
         WMPLib.WindowsMediaPlayer effectPlayer = new WMPLib.WindowsMediaPlayer();
+        Random randNum = new Random();
 
         public Better21Form1(ref WMPLib.WindowsMediaPlayer soundPlayer)
         {
@@ -71,7 +69,6 @@ namespace Simplified21Sasha
             this.lblUTotal.Hide();
             this.lblCTotal.Hide();
             this.lblFlip.Hide();
-
             this.lblAce.Hide();
             this.btnOne.Visible = false;
             this.btnOne.Enabled = false;
@@ -82,10 +79,16 @@ namespace Simplified21Sasha
             player = soundPlayer;
         }
 
+        // declare the list
         List<Image> listCardImages = new List<Image>();
 
+        // Procedure: NewGame
+        // Input: None
+        // Output: void
+        // Description: This procedure populates a list with images of cards. 
         private void NewGame()
         {
+            // populate the deck
             listCardImages.Insert(0, Properties.Resources.AceC);
             listCardImages.Insert(1, Properties.Resources.AceH);
             listCardImages.Insert(2, Properties.Resources.AceD);
@@ -151,13 +154,17 @@ namespace Simplified21Sasha
             listCardImages.Insert(50, Properties.Resources.KD);
             listCardImages.Insert(51, Properties.Resources.KS);
 
+            // call CalculateTotal
             CalculateTotal();
         }
 
-        private int DealCard(ref PictureBox aPictureBox, int point)
+        // Procedure: DealCard
+        // Input: ref PictureBox aPictureBox, int cardNumber
+        // Output: void
+        // Description: This procedure deals cards to the player and the dealer. 
+        private void DealCard(ref PictureBox aPictureBox, int cardNumber)
         {
-            Random random = new Random();
-
+            // display totals and cards
             this.lblDealer.Show();
             this.lblUser.Show();
             this.lblUTotal.Show();
@@ -167,336 +174,236 @@ namespace Simplified21Sasha
             picCCard.Visible = true;
             picCCard2.Visible = true;
 
-            int cardNumber;
-            Random randNum = new Random();
+            // set the card image equal to the value of cardNumber in the list
+            Image card = listCardImages[cardNumber];
+            aPictureBox.Image = card;
 
-            cardNumber = randNum.Next(0, listCardImages.Count() - 1);
-
-
+            // set the points for each card
             if (cardNumber == 0)
-            {
-                aPictureBox.Image = Properties.Resources.AceC;
-                listCardImages.RemoveAt(0);
+            { 
                 point = 0;
             }
             else if (cardNumber == 1)
             {
-                aPictureBox.Image = Properties.Resources.AceH;
-                listCardImages.RemoveAt(1);
                 point = 0;
             }
             else if (cardNumber == 2)
             {
-                aPictureBox.Image = Properties.Resources.AceD;
-                listCardImages.RemoveAt(2);
                 point = 0;
             }
             else if (cardNumber == 3)
             {
-                aPictureBox.Image = Properties.Resources.AceS;
-                listCardImages.RemoveAt(3);
                 point = 0;
             }
             else if (cardNumber == 4)
             {
-                aPictureBox.Image = Properties.Resources.TwoC;
-                listCardImages.RemoveAt(4);
                 point = 2;
             }
             else if (cardNumber == 5)
             {
-                aPictureBox.Image = Properties.Resources.TwoH;
-                listCardImages.RemoveAt(5);
                 point = 2;
             }
             else if (cardNumber == 6)
             {
-                aPictureBox.Image = Properties.Resources.TwoD;
-                listCardImages.RemoveAt(6);
                 point = 2;
             }
             else if (cardNumber == 7)
             {
-                aPictureBox.Image = Properties.Resources.TwoS;
-                listCardImages.RemoveAt(7);
                 point = 2;
             }
             else if (cardNumber == 8)
             {
-                aPictureBox.Image = Properties.Resources.ThreeC;
-                listCardImages.RemoveAt(8);
                 point = 3;
             }
             else if (cardNumber == 9)
             {
-                aPictureBox.Image = Properties.Resources.ThreeH;
-                listCardImages.RemoveAt(9);
                 point = 3;
             }
             else if (cardNumber == 10)
             {
-                aPictureBox.Image = Properties.Resources.ThreeD;
-                listCardImages.RemoveAt(10);
                 point = 3;
             }
             else if (cardNumber == 11)
             {
-                aPictureBox.Image = Properties.Resources.ThreeS;
-                listCardImages.RemoveAt(11);
                 point = 3;
             }
             else if (cardNumber == 12)
             {
-                aPictureBox.Image = Properties.Resources.FourC;
-                listCardImages.RemoveAt(12);
                 point = 4;
             }
             else if (cardNumber == 13)
             {
-                aPictureBox.Image = Properties.Resources.FourH;
-                listCardImages.RemoveAt(13);
                 point = 4;
             }
             else if (cardNumber == 14)
             {
-                aPictureBox.Image = Properties.Resources.FourD;
-                listCardImages.RemoveAt(14);
                 point = 4;
             }
             else if (cardNumber == 15)
             {
-                aPictureBox.Image = Properties.Resources.FourS;
-                listCardImages.RemoveAt(15);
                 point = 4;
             }
             else if (cardNumber == 16)
             {
-                aPictureBox.Image = Properties.Resources.FiveC;
-                listCardImages.RemoveAt(16);
                 point = 5;
             }
             else if (cardNumber == 17)
             {
-                aPictureBox.Image = Properties.Resources.FiveD;
-                listCardImages.RemoveAt(17);
                 point = 5;
             }
             else if (cardNumber == 18)
             {
-                aPictureBox.Image = Properties.Resources.FiveH;
-                listCardImages.RemoveAt(18);
                 point = 5;
             }
             else if (cardNumber == 19)
             {
-                aPictureBox.Image = Properties.Resources.FiveS;
-                listCardImages.RemoveAt(19);
                 point = 5;
             }
             else if (cardNumber == 20)
             {
-                aPictureBox.Image = Properties.Resources.SixC;
-                listCardImages.RemoveAt(20);
                 point = 6;
             }
             else if (cardNumber == 21)
             {
-                aPictureBox.Image = Properties.Resources.SixD;
-                listCardImages.RemoveAt(21);
                 point = 6;
             }
             else if (cardNumber == 22)
             {
-                aPictureBox.Image = Properties.Resources.SixH;
-                listCardImages.RemoveAt(22);
                 point = 6;
             }
             else if (cardNumber == 23)
             {
-                aPictureBox.Image = Properties.Resources.SixS;
-                listCardImages.RemoveAt(23);
                 point = 6;
             }
             else if (cardNumber == 24)
             {
-                aPictureBox.Image = Properties.Resources.SevenC;
-                listCardImages.RemoveAt(24);
                 point = 7;
             }
             else if (cardNumber == 25)
             {
-                aPictureBox.Image = Properties.Resources.SevenD;
-                listCardImages.RemoveAt(25);
                 point = 7;
             }
             else if (cardNumber == 26)
             {
-                aPictureBox.Image = Properties.Resources.SevenH;
-                listCardImages.RemoveAt(26);
                 point = 7;
             }
             else if (cardNumber == 27)
             {
-                aPictureBox.Image = Properties.Resources.SevenS;
-                listCardImages.RemoveAt(27);
                 point = 7;
             }
             else if (cardNumber == 28)
             {
-                aPictureBox.Image = Properties.Resources.EightC;
-                listCardImages.RemoveAt(28);
                 point = 8;
             }
             else if (cardNumber == 29)
             {
-                aPictureBox.Image = Properties.Resources.EightD;
-                listCardImages.RemoveAt(29);
                 point = 8;
             }
             else if (cardNumber == 30)
             {
-                aPictureBox.Image = Properties.Resources.EightH;
-                listCardImages.RemoveAt(30);
                 point = 8;
             }
             else if (cardNumber == 31)
             {
-                aPictureBox.Image = Properties.Resources.EightS;
-                listCardImages.RemoveAt(31);
                 point = 8;
             }
             else if (cardNumber == 32)
             {
-                aPictureBox.Image = Properties.Resources.NineC;
-                listCardImages.RemoveAt(32);
                 point = 9;
             }
             else if (cardNumber == 33)
             {
-                aPictureBox.Image = Properties.Resources.NineD;
-                listCardImages.RemoveAt(33);
                 point = 9;
             }
             else if (cardNumber == 34)
             {
-                aPictureBox.Image = Properties.Resources.NineH;
-                listCardImages.RemoveAt(34);
                 point = 9;
             }
             else if (cardNumber == 35)
             {
-                aPictureBox.Image = Properties.Resources.NineS;
-                listCardImages.RemoveAt(35);
                 point = 9;
             }
             else if (cardNumber == 36)
             {
-                aPictureBox.Image = Properties.Resources.TenC;
-                listCardImages.RemoveAt(36);
                 point = 10;
             }
             else if (cardNumber == 37)
             {
-                aPictureBox.Image = Properties.Resources.TenD;
-                listCardImages.RemoveAt(37);
                 point = 10;
             }
             else if (cardNumber == 38)
             {
-                aPictureBox.Image = Properties.Resources.TenH;
-                listCardImages.RemoveAt(38);
                 point = 10;
             }
             else if (cardNumber == 39)
             {
-                aPictureBox.Image = Properties.Resources.TenS;
-                listCardImages.RemoveAt(39);
                 point = 10;
             }
             else if (cardNumber == 40)
             {
-                aPictureBox.Image = Properties.Resources.JC;
-                listCardImages.RemoveAt(40);
                 point = 10;
             }
             else if (cardNumber == 41)
             {
-                aPictureBox.Image = Properties.Resources.JD;
-                listCardImages.RemoveAt(41);
                 point = 10;
             }
             else if (cardNumber == 42)
             {
-                aPictureBox.Image = Properties.Resources.JH;
-                listCardImages.RemoveAt(42);
                 point = 10;
             }
             else if (cardNumber == 43)
             {
-                aPictureBox.Image = Properties.Resources.JS;
-                listCardImages.RemoveAt(43);
                 point = 10;
             }
             else if (cardNumber == 44)
             {
-                aPictureBox.Image = Properties.Resources.QC;
-                listCardImages.RemoveAt(44);
                 point = 10;
             }
             else if (cardNumber == 45)
             {
-                aPictureBox.Image = Properties.Resources.QD;
-                listCardImages.RemoveAt(45);
                 point = 10;
             }
             else if (cardNumber == 46)
             {
-                aPictureBox.Image = Properties.Resources.QH;
-                listCardImages.RemoveAt(46);
                 point = 10;
             }
             else if (cardNumber == 47)
             {
-                aPictureBox.Image = Properties.Resources.QS;
-                listCardImages.RemoveAt(47);
                 point = 10;
             }
             else if (cardNumber == 48)
             {
-                aPictureBox.Image = Properties.Resources.KC;
-                listCardImages.RemoveAt(48);
                 point = 10;
             }
             else if (cardNumber == 49)
             {
-                aPictureBox.Image = Properties.Resources.KD;
-                listCardImages.RemoveAt(49);
                 point = 10;
             }
             else if (cardNumber == 50)
             {
-                aPictureBox.Image = Properties.Resources.KH;
-                listCardImages.RemoveAt(50);
                 point = 10;
             }
             else if (cardNumber == 51)
             {
-                aPictureBox.Image = Properties.Resources.KS;
-                listCardImages.RemoveAt(51);
                 point = 10;
             }
 
-            return point;
         }
 
+        // Procedure: Ace
+        // Input: None
+        // Output: void
+        // Description: This procedure displays objects related to the ace decision and hides other objects. 
         private void Ace()
         {
+            // display the objects related to he ace decision
             this.lblAce.Show();
             this.btnOne.Visible = true;
             this.btnOne.Enabled = true;
             this.btnEleven.Visible = true;
             this.btnEleven.Visible = true;
 
+            // hide objects that are not needed
             this.lblHitOrStay.Hide();
             this.btnHit.Visible = false;
             this.btnHit.Enabled = false;
@@ -508,31 +415,45 @@ namespace Simplified21Sasha
             this.btnStay2.Enabled = false;
         }
 
+        // Procedure: CalculateTotal
+        // Input: None
+        // Output: void
+        // Description: This procedure displays cards and calculates totals. 
         private void CalculateTotal()
         {
+            // call HitOrStay
             HitOrStay();
 
+            // display the cards
             picCard.Visible = true;
             picCard2.Visible = true;
             picCCard.Visible = true;
 
+            // get the cards and points
             if (picCard.Visible == true)
             {
-                uTotal1 = DealCard(ref this.picCard, point);
+                cardNumber = randNum.Next(0, listCardImages.Count() - 1);
+                DealCard(ref this.picCard, cardNumber);
+                uTotal1 = point;
             }
             if (picCard2.Visible == true)
             {
-                uTotal2 = DealCard(ref this.picCard2, point);
+                cardNumber = randNum.Next(0, listCardImages.Count() - 1);
+                DealCard(ref this.picCard2, cardNumber);
+                uTotal2 = point;
             }
             if (picCCard.Visible == true)
             {
-                cTotal1 = DealCard(ref this.picCCard, point);
+                cardNumber = randNum.Next(0, listCardImages.Count() - 1);
+                DealCard(ref this.picCCard, cardNumber);
+                cTotal1 = point;
             }
             if (picCCard2.Visible == true)
             {
                 picCCard2.Image = Properties.Resources.Back;
             }
 
+            // calculate the totals
             if (uTotal1 == 0)
             {
                 Ace();
@@ -550,14 +471,27 @@ namespace Simplified21Sasha
                 uTotal = uTotal1 + uTotal2 + aceValue;
                 this.lblUTotal.Text = "Your total: " + uTotal;
 
-                cTotal = cTotal1;
-                this.lblCTotal.Text = "Dealer's total: " + cTotal;
+                if (cTotal1 == 0)
+                {
+                    cTotal = cTotal1 + cValue;
+                    this.lblCTotal.Text = "Dealer's total: " + cTotal;
+                }
+                else
+                {
+                    cTotal = cTotal1;
+                    this.lblCTotal.Text = "Dealer's total: " + cTotal;
+                }
             }
 
         }
 
+        // Procedure: HitOrStay
+        // Input: None
+        // Output: void
+        // Description: This procedure displays objects related to the hit or stay decision. 
         private void HitOrStay()
         {
+            // display objects related to the hit or stay decision
             this.lblHitOrStay.Show();
             this.btnHit.Visible = true;
             this.btnHit.Enabled = true;
@@ -565,8 +499,13 @@ namespace Simplified21Sasha
             this.btnStay.Enabled = true;
         }
 
+        // Procedure: HitOrStay2
+        // Input: None
+        // Output: void
+        // Description: This procedure displays objects related to the second hit or stay decision. 
         private void HitOrStay2()
         {
+            // display objects related to the hit or stay decision
             this.lblHitOrStay.Show();
             this.btnHit.Visible = false;
             this.btnHit.Enabled = false;
@@ -583,12 +522,13 @@ namespace Simplified21Sasha
             // convert the string in the text box to an integer
             bet = Convert.ToInt32(this.nudBet.Value);
 
-            // display the deal button and disable the betting objects
+            // disable the betting objects
             this.btnBet.Enabled = false;
             this.btnBet.Visible = false;
             this.lblBet.Visible = false;
             this.nudBet.Visible = false;
 
+            // call NewGame
             NewGame();
         }
 
@@ -611,11 +551,16 @@ namespace Simplified21Sasha
 
         private void btnHit_Click(object sender, EventArgs e)
         {
+            // call HitOrStay2
             HitOrStay2();
 
-            picCard3.Visible = true;
-            uTotal3 = DealCard(ref this.picCard3, point);
+            // get the card and total
+            cardNumber = randNum.Next(0, listCardImages.Count() - 1);
+            DealCard(ref this.picCard3, cardNumber);
+            uTotal3 = point;
+            this.picCard3.Visible = true;
 
+            // calculate the totals
             if (uTotal3 == 0)
             {
                 Ace();
@@ -628,25 +573,60 @@ namespace Simplified21Sasha
                 this.lblUTotal.Text = "Your total: " + uTotal;
             }
 
-
         }
 
+        // Procedure: DealerCards
+        // Input: None
+        // Output: void
+        // Description: This procedure displays the dealer's cards and totals. 
         private void DealerCards()
         {
-            picCCard3.Visible = true;
-            cTotal3 = DealCard(ref this.picCCard3, point);
-            picCCard4.Visible = true;
-            cTotal4 = DealCard(ref this.picCCard4, point);
+            // get the card and total
+            cardNumber = randNum.Next(0, listCardImages.Count() - 1);
+            DealCard(ref this.picCCard3, cardNumber);
+            cTotal3 = point;
+            this.picCCard3.Visible = true;
 
+            // get the card and total
+            cardNumber = randNum.Next(0, listCardImages.Count() - 1);
+            DealCard(ref this.picCCard4, cardNumber);
+            cTotal4 = point;
+            this.picCCard4.Visible = true;
 
-            cTotal = cTotal1 + cTotal2 + cTotal3 + cTotal4;
-            this.lblCTotal.Text = "Dealer's total: " + cTotal;
+            // calculate the totals
+            if (cTotal1 == 0)
+            {
+                cTotal = cTotal1 + cTotal2 + cTotal3 + cTotal4 + cValue;
+                this.lblCTotal.Text = "Dealer's total: " + cTotal;
+            }
+            else if (cTotal2 == 0)
+            {
+                cTotal = cTotal1 + cTotal2 + cTotal3 + cTotal4 + cValue;
+                this.lblCTotal.Text = "Dealer's total: " + cTotal;
+            }
+            else if (cTotal3 == 0)
+            {
+                cTotal = cTotal1 + cTotal2 + cTotal3 + cTotal4 + cValue;
+                this.lblCTotal.Text = "Dealer's total: " + cTotal;
+            }
+            else if (cTotal4 == 0)
+            {
+                cTotal = cTotal1 + cTotal2 + cTotal3 + cTotal4 + cValue;
+                this.lblCTotal.Text = "Dealer's total: " + cTotal;
+            }
+            else 
+            {
+                cTotal = cTotal1 + cTotal2 + cTotal3 + cTotal4;
+                this.lblCTotal.Text = "Dealer's total: " + cTotal;
+            }
 
+            // call DetermineResults
             DetermineResults();
         }
 
         private void btnStay_Click(object sender, EventArgs e)
         {
+            // disable the objects related to the hit or stay decision and display the flip label
             this.lblHitOrStay.Hide();
             this.btnHit.Visible = false;
             this.btnHit.Enabled = false;
@@ -657,40 +637,49 @@ namespace Simplified21Sasha
 
         private void btnHit2_Click(object sender, EventArgs e)
         {
-            picCard4.Visible = true;
-            uTotal4 = DealCard(ref this.picCard4, point);
+            // get the card and total
+            cardNumber = randNum.Next(0, listCardImages.Count() - 1);
+            DealCard(ref this.picCard4, cardNumber);
+            uTotal4 = point;
+            this.picCard4.Visible = true;
 
+            // calculate the totals
             if (uTotal4 == 0)
             {
-                Ace();
-                uTotal = uTotal1 + uTotal2 + uTotal3 + uTotal4 + aceValue;
-                this.lblUTotal.Text = "Your total: " + uTotal;
+                uTotal4 = 1;
 
             }
-            else 
-            {
-                uTotal = uTotal1 + uTotal2 + uTotal3 + uTotal4 + aceValue;
-                this.lblUTotal.Text = "Your total: " + uTotal;
+            uTotal = uTotal1 + uTotal2 + uTotal3 + uTotal4 + aceValue;
+            this.lblUTotal.Text = "Your total: " + uTotal;
 
-                this.lblHitOrStay.Hide();
-                this.btnHit.Visible = false;
-                this.btnHit.Enabled = false;
-                this.btnStay.Visible = false;
-                this.btnStay.Enabled = false;
-                this.lblFlip.Show();
-            }
-
+            // disable the objects related to the hit or stay decision and display the flip label
+            this.lblHitOrStay.Hide();
+            this.btnHit.Visible = false;
+            this.btnHit.Enabled = false;
+            this.btnStay.Visible = false;
+            this.btnStay.Enabled = false;
+            this.lblFlip.Show();
             this.lblHitOrStay.Hide();
             this.btnHit2.Visible = false;
             this.btnHit2.Enabled = false;
             this.btnStay2.Visible = false;
             this.btnStay2.Enabled = false;
 
+            // set the ace value to 0
+            aceValue = 0;
+
+            // set the length of the list to the length minus 8
+            length = length - 8;
 
         }
 
+        // Procedure: DetermineResults
+        // Input: None
+        // Output: void
+        // Description: This procedure displays the results of the game. 
         private void DetermineResults()
         {
+            // play the sound effect
             effectPlayer.URL = "TaDa.mp3";
             effectPlayer.controls.play();
 
@@ -731,12 +720,14 @@ namespace Simplified21Sasha
                 MessageBox.Show("It is a tie!" + " Your total:" + uTotal + " Dealer's total:" + cTotal + " Your payoff:$" + payoff, "Results");
             }
 
-            if (listCardImages.Count() < 8)
+            // check if there are enough cards to keep playing, and if not, start a new game
+            if (length < 7)
             {
                 MessageBox.Show("Starting a new game.", "Better 21");
                 ClearGame();
                 this.listCardImages.Clear();
                 NewGame();
+                length = 52;
             }
             else
             {
@@ -747,8 +738,13 @@ namespace Simplified21Sasha
 
         }
 
+        // Procedure: ClearGame
+        // Input: None
+        // Output: void
+        // Description: This procedure clears the form from objects. 
         private void ClearGame()
         {
+            // clear the form from objects
             this.picCard.Hide();
             this.picCard2.Hide();
             this.picCard3.Hide();
@@ -779,6 +775,7 @@ namespace Simplified21Sasha
 
         private void btnStay2_Click(object sender, EventArgs e)
         {
+            // disable objects related to the second hit or stay decision
             this.lblHitOrStay.Hide();
             this.btnHit2.Visible = false;
             this.btnHit2.Enabled = false;
@@ -789,14 +786,17 @@ namespace Simplified21Sasha
 
         private void btnOne_Click(object sender, EventArgs e)
         {
+            // disable the objects related to the ace decision
             this.lblAce.Hide();
             this.btnOne.Visible = false;
             this.btnOne.Enabled = false;
             this.btnEleven.Visible = false;
             this.btnEleven.Visible = false;
 
+            // set the ace value equal to 1
             aceValue = 1;
 
+            // call hit or stay if the values equal to 0 or disable hit or stay objects if uTotal4 equals 0
             if (uTotal1 == 0)
             {
                 HitOrStay();
@@ -822,14 +822,17 @@ namespace Simplified21Sasha
 
         private void btnEleven_Click(object sender, EventArgs e)
         {
+            // disable the objects related to the ace decision
             this.lblAce.Hide();
             this.btnOne.Visible = false;
             this.btnOne.Enabled = false;
             this.btnEleven.Visible = false;
             this.btnEleven.Visible = false;
 
+            // set the ace value equal to 11
             aceValue = 11;
 
+            // call hit or stay if the values equal to 0 or disable hit or stay objects if uTotal4 equals 0
             if (uTotal1 == 0)
             {
                 HitOrStay();
@@ -855,9 +858,19 @@ namespace Simplified21Sasha
 
         private void picCCard2_Click(object sender, EventArgs e)
         {
-            cTotal4 = DealCard(ref this.picCCard2, point);
+            // get the card and total
+            cardNumber = randNum.Next(0, listCardImages.Count() - 1);
+            DealCard(ref this.picCCard2, cardNumber);
+            cTotal2 = point;
+            this.picCCard2.Visible = true;
+            cTotal2 = point;
+
+            // hide the flip label
             this.lblFlip.Hide();
+
+            // call DealerCards
             DealerCards();
+
         }
     }
 }
